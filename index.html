@@ -1,71 +1,92 @@
 <!DOCTYPE html>
-<html lang="en">
-   <head>
-      <!-- basic -->
-      <meta charset="utf-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <!-- mobile metas -->
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
-      <!-- site metas -->
-      <title>Sellaci</title>
-      <meta name="keywords" content="">
-      <meta name="description" content="">
-      <meta name="author" content="">
-      <!-- bootstrap css -->
-      <link rel="stylesheet" href="css/bootstrap.min.css">
-      <link rel="icon" href="images/fevicon.png" type="image/gif" />
-   </head>
-   <!-- body -->
-   <body style="background-image: url(images/Background.jpg); background-repeat: no-repeat; background-size: cover;">
-        <div id="main">
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-12">
-                        <p class="text-center text-uppercase font-weight-bold" style="color: #fff; font-size: 50px">Sellaci</p>
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-2">
-                        
-                    </div>
-                    <div class="col-sm-8">
-                        <div class="form-group">
-                            <label for="exampleFormControlTextarea1" style="color: #fff">Clubs joués</label>
-                            <h3 style="font-style: italic; color: #fff">Club 1
-                            <h3 style="font-style: italic; color: #fff">Club 2
-                            <h3 style="font-style: italic; color: #fff">Club 3
-                        </div>
-                    </div>                        
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-2">
-                        
-                    </div>
-                    <div class="col-sm-8">
-                        <div class="form-group">
-                            <label for="exampleFormControlTextarea1" style="color: #fff">Joueur</label>
-                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="1"></textarea>
-                        </div>
-                    </div>                        
-                </div>
-            </div>
-            <div class="container" id="submitbutton">
-                <div class="row">
-                    <div class="col-sm-2">
-                        <div class="col-sm-8">
-                            <button>Submit</button>
-                        </div>
-                        
-                    </div>
-                </div>
+<html>
 
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- mobile metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <!-- site metas -->
+    <title>Sellaci</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="jquery.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Baloo+2' rel='stylesheet'>
+</head>
+<body>
+    <div id="title">
+        <div>
+            <h1 class="text-center text-uppercase font-weight-bold">Sellaci</h1>
+        </div>
+        <div id="Homepage">
+            <button id="play" onclick="Play()">Play</button><br><br>
+            <button id="rules" onclick="Rules()">Rules</button><br><br>
+            <button id="aboutus" onclick="AboutUs()">About Us</button>
+        </div>
+        <div id="PageJouer" style="display:none">
+            <button id="playAgainButton" onclick="Go()">Go!</button>
+            <div id="Game" style="display:none">
+                <div id="clubs">
+                    <h2>Clubs joués</h2>
+                </div>       
+                <div id="clublist">
+                    <p>Club 1
+                    <p>Club 2
+                    <p>Club 3
+                </div>   
+                <div id="playername">
+                    <div id="who">
+                        <h2>Qui suis-je ?</h2>
+                    </div>
+                    <div id="enterthename">
+                        <textarea class="form-control" id="player" rows="1" placeholder="Nom du joueur"></textarea>
+                    </div>               
+                </div>
+                <div id="time">
+                    <p>Temps restant:  <span id="timer" style="color:red; font-weight:bold">180</span>  secondes</p>
+                </div>
+                <div id="submitbutton">
+                    <div>
+                        <input type="submit" value="Soumettre" onclick="BackToMenu()">
+                    </div>
+                </div>
+            </div>
+        </div> 
+        <div id="PageRegles" style="display:none">
+            <div id="Regles">
+                <h2>Comment jouer ?</h2>
+            </div>     
+            <div id="texteregles">
+                <p>Ce jeu est basé sur vos connaissances footballistiques actuelles.<br>Trois clubs se présentent à vous, vous devrez tout simplement deviner le joueur ayant joué pour ces trois clubs.<br>Attention, seuls les joueurs encore en activité comptent.<br>Une fois que vous pensez avoir trouvé le joueur, cliquez sur le bouton " <span style="font-style:italic; font-weight: bold; color: red;">Soumettre</span> "</p>
+            </div>
+            <div id="submitbutton">
+                <div>
+                    <button id="rules" onclick="BackToMenu()">Menu Principal</button>
+                </div>
             </div>
         </div>
+        <div id="PageAPropos" style="display:none">
+            <div id="APropos">
+                <h2>A propos de Sellaci</h2>
+            </div>     
+            <div id="texteapropos">
+                <p>Trois potes fans de foot jouaient à ce jeu sur la route de leur vacances pour passer le temps. La volonté était de partager aux plus fous de foot ce jeu original et qui vous fait travailler vos connaissances foot.<br>Pourquoi avoir choisi Sellaci comme nom ? A vous de le deviner...</p>
+            </div>
+            <div id="submitbutton">
+                <div>
+                    <button id="aboutus" onclick="BackToMenu()">Menu Principal</button>
+                </div>
+            </div>
+        </div>
+    </div>
+            
 
-   </body>
-   </html>
+</body>
+
+</html>
