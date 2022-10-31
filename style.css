@@ -1,0 +1,67 @@
+body
+{
+    text-align: center;
+    font-family: "Baloo 2",arial, helvetica;
+    color: azure;
+    background-color: #6ec7f5;
+    background-image: linear-gradient(0deg, #6ec7f5 0%, #021d20 100%);
+    background-repeat: no-repeat;    
+}
+#player
+{
+    margin: auto;
+    max-width: fit-content;
+}
+#playername #playedclubs
+{
+    font-weight: bold;
+    margin-top: 50px;
+}
+#Page2
+{
+    color: azure;
+    margin-top: 5%;
+}
+#title
+{
+    margin-top: 2%;
+}
+input [type=submit]
+{
+    border-color: aquamarine;
+    background-color: #021d20;
+    color: aliceblue;
+    font-family: "Baloo 2", arial, helvetica;
+}
+input[type=submit]:hover 
+{
+    border-color: aquamarine;
+    background-color: #021d20;
+    color: aliceblue;
+    font-family: "Baloo 2", arial, helvetica;
+    border-radius: 5px;
+}
+#clubs
+{
+    margin-top: 40px;
+}
+#clublist
+{
+    margin-top: 50px;
+}
+#submitbutton
+{
+    margin-top: 50px;
+}
+#who
+{
+    margin-top: 50px;
+}
+#enterthename
+{
+    margin-top: 20px;
+}
+#time
+{
+    margin-top: 20px;
+}
