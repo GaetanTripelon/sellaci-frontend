@@ -1,3 +1,7 @@
+URL_API = 'http://app-sellaci.eu-central-1.elasticbeanstalk.com/'
+//URL_API = 'http://127.0.0.1:5000/'
+
+
 function onExpandableTextareaInput({ target:elm }){
     // make sure the input event originated from a textarea and it's desired to be auto-expandable
     if( !elm.classList.contains('autoExpand') || !elm.nodeName == 'textarea' ) return
@@ -117,7 +121,7 @@ function onExpandableTextareaInput({ target:elm }){
     url_parameters = 'players_with_clubs?clubs=' + selected_clubs.join() + '&player=' + player_tried
     console.log(url_parameters)
     var request_player = new XMLHttpRequest()
-    request_player.open('GET', 'http://127.0.0.1:5000/' + url_parameters, true)
+    request_player.open('GET', URL_API + url_parameters, true)
     request_player.onload = function () {
       var is_success = JSON.parse(this.response).success
       const result = document.getElementById('result')    
@@ -126,10 +130,10 @@ function onExpandableTextareaInput({ target:elm }){
 
       if (request_player.status >= 200 && request_player.status < 400) {
         if (is_success) {
-          h1.textContent = 'CONGRATS !'
+          h1.textContent = 'Bien joué BG !'
           result.appendChild(h1)
         } else {
-          h1.textContent = 'Hmmm no sorry..'
+          h1.textContent = 'Hmmm non désolé mauvais..'
           result.appendChild(h1)
         }
       } else {
@@ -156,10 +160,11 @@ function onExpandableTextareaInput({ target:elm }){
 
 
 var request = new XMLHttpRequest()
-request.open('GET', 'http://127.0.0.1:5000/random_player', true)
+request.open('GET', URL_API + 'random_player', true)
 request.onload = function () {
   var data = JSON.parse(this.response)
-  selected_clubs = shuffle(data.clubs)
+  console.log(data)
+  selected_clubs = shuffle(data.Teams)
   if (request.status >= 200 && request.status < 400) {
     selected_clubs.forEach(club => {
       const club_list = document.getElementById('clublist')      
