@@ -84,6 +84,9 @@ function onExpandableTextareaInput({ target:elm }){
   }
 
   function Go() {
+    get_random_player()
+    document.getElementById("result").innerHTML = ''
+    result.setAttribute("id", "result");
     var v = document.getElementById("Game");
     var u = document.getElementById('playAgainButton')
       if (v.style.display === "none") {
@@ -127,11 +130,16 @@ function onExpandableTextareaInput({ target:elm }){
       const result = document.getElementById('result')    
       result.textContent = ''  
       const h1 = document.createElement('h1')
+      result.setAttribute("id", "result");
 
       if (request_player.status >= 200 && request_player.status < 400) {
         if (is_success) {
           h1.textContent = 'Bien joué BG !'
+          const go_button = document.createElement('button')
+          go_button.onclick = Go()
+          go_button.value =' Encore !'
           result.appendChild(h1)
+          result.append(go_button)
         } else {
           h1.textContent = 'Hmmm non désolé mauvais..'
           result.appendChild(h1)
@@ -159,21 +167,28 @@ function onExpandableTextareaInput({ target:elm }){
   }
 
 
-var request = new XMLHttpRequest()
-request.open('GET', URL_API + 'random_player', true)
-request.onload = function () {
-  var data = JSON.parse(this.response)
-  console.log(data)
-  selected_clubs = shuffle(data.Teams)
-  if (request.status >= 200 && request.status < 400) {
-    selected_clubs.forEach(club => {
-      const club_list = document.getElementById('clublist')      
-      const h1 = document.createElement('h1')
-      h1.textContent = club
-      club_list.appendChild(h1)
-    })
-  } else {
-    console.log('error')
+function get_random_player() {
+  try {
+    document.getElementById('clublist').innerHTML = '' 
+  } catch (error) {
+    console.error(error);
   }
+  var request = new XMLHttpRequest()
+  request.open('GET', URL_API + 'random_player', true)
+  request.onload = function () {
+    var data = JSON.parse(this.response)
+    console.log(data)
+    selected_clubs = shuffle(data.Teams)
+    if (request.status >= 200 && request.status < 400) {
+      selected_clubs.forEach(club => {
+        const club_list = document.getElementById('clublist')      
+        const h1 = document.createElement('h1')
+        h1.textContent = club
+        club_list.appendChild(h1)
+      })
+    } else {
+      console.log('error')
+    }
+  }
+  request.send()
 }
-request.send()
