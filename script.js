@@ -109,3 +109,66 @@ function onExpandableTextareaInput({ target:elm }){
       z.style.display = "none";
     }
   }
+
+  function TryPlayerButton() {
+    console.log(selected_clubs)
+    const player_tried = document.getElementById('player').value
+    console.log(player_tried)
+    url_parameters = 'players_with_clubs?clubs=' + selected_clubs.join() + '&player=' + player_tried
+    console.log(url_parameters)
+    var request_player = new XMLHttpRequest()
+    request_player.open('GET', 'http://127.0.0.1:5000/' + url_parameters, true)
+    request_player.onload = function () {
+      var is_success = JSON.parse(this.response).success
+      const result = document.getElementById('result')    
+      result.textContent = ''  
+      const h1 = document.createElement('h1')
+
+      if (request_player.status >= 200 && request_player.status < 400) {
+        if (is_success) {
+          h1.textContent = 'CONGRATS !'
+          result.appendChild(h1)
+        } else {
+          h1.textContent = 'Hmmm no sorry..'
+          result.appendChild(h1)
+        }
+      } else {
+        console.log('error')
+      }
+    }
+    request_player.send()
+  }
+
+
+  function shuffle(array) {
+    let currentIndex = array.length,  randomIndex;
+    // While there remain elements to shuffle.
+    while (currentIndex != 0) {
+      // Pick a remaining element.
+      randomIndex = Math.floor(Math.random() * currentIndex);
+      currentIndex--;
+      // And swap it with the current element.
+      [array[currentIndex], array[randomIndex]] = [
+        array[randomIndex], array[currentIndex]];
+    }
+    return array.slice(0,3);
+  }
+
+
+var request = new XMLHttpRequest()
+request.open('GET', 'http://127.0.0.1:5000/random_player', true)
+request.onload = function () {
+  var data = JSON.parse(this.response)
+  selected_clubs = shuffle(data.clubs)
+  if (request.status >= 200 && request.status < 400) {
+    selected_clubs.forEach(club => {
+      const club_list = document.getElementById('clublist')      
+      const h1 = document.createElement('h1')
+      h1.textContent = club
+      club_list.appendChild(h1)
+    })
+  } else {
+    console.log('error')
+  }
+}
+request.send()
