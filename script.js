@@ -1,20 +1,6 @@
 URL_API = 'http://app-sellaci.eu-central-1.elasticbeanstalk.com/'
 //URL_API = 'http://127.0.0.1:5000/'
 
-
-function onExpandableTextareaInput({ target:elm }){
-    // make sure the input event originated from a textarea and it's desired to be auto-expandable
-    if( !elm.classList.contains('autoExpand') || !elm.nodeName == 'textarea' ) return
-    
-    var minRows = elm.getAttribute('data-min-rows')|0, rows;
-    !elm._baseScrollHeight && getScrollHeight(elm)
-  
-    elm.rows = minRows
-    rows = Math.ceil((elm.scrollHeight - elm._baseScrollHeight) / 16)
-    elm.rows = minRows + rows
-  }
-  
-  
   // global delegated event listener
   /*document.addEventListener('input', onExpandableTextareaInput)
   document.addEventListener('input', onExpendableSelectInput)
@@ -26,100 +12,60 @@ function onExpandableTextareaInput({ target:elm }){
     Page2.style.display = Jouer.click ? "block" : "none";
   }*/
 
-  var timer; 
-  var timeLeft = 180;
 
-  function Play() {
-    var x = document.getElementById("PageJouer");
-    var y = document.getElementById("Homepage");
-    var z = document.getElementById("PageRegles");
-    var w = document.getElementById("PageAPropos");
-    if (x.style.display === "none") {
-      x.style.display = "block";
-      y.style.display = "none";
-      z.style.display = "none";
-      w.style.display = "none";
-    } else {
-      x.style.display = "none";
-      y.style.display = "block";
-      z.style.display = "none";
-      w.style.display = "none";
-    }
+
+  function Init() {
+    document.getElementById("PageJouer").style.display = "block";
+    document.getElementById("Homepage").style.display = "none";
+    document.getElementById("PageRegles").style.display = "none";
+    document.getElementById("PageAPropos").style.display = "none";
+    document.getElementById("submitbutton").style.display = 'block';
+    document.getElementById("textarea-player").style.display = "block";
+    document.getElementById("textarea-player").value = "";
+    document.getElementById("result").innerHTML = '';
+    document.getElementById('replay').innerHTML = '' ;
   }
 
   function Rules() {
-    var x = document.getElementById("PageJouer");
-    var y = document.getElementById("Homepage");
-    var z = document.getElementById("PageRegles");
-    var w = document.getElementById("PageAPropos");
-    if (z.style.display === "none") {
-      z.style.display = "block";
-      y.style.display = "none";
-      x.style.display = "none";
-      w.style.display = "none";
-    } else {
-      x.style.display = "none";
-      y.style.display = "block";
-      z.style.display = "none";
-      w.style.display = "none";
-    }
+    document.getElementById("PageRegles").style.display = "block";
+    document.getElementById("Homepage").style.display = "none";
+    document.getElementById("PageJouer").style.display = "none";
+    document.getElementById("PageAPropos").style.display = "none";
   }
 
   function AboutUs() {
-    var x = document.getElementById("PageJouer");
-    var y = document.getElementById("Homepage");
-    var z = document.getElementById("PageRegles");
-    var w = document.getElementById("PageAPropos");
-    if (w.style.display === "none") {
-      w.style.display = "block";
-      x.style.display = "none";
-      y.style.display = "none";
-      z.style.display = "none";
-    } else {
-      w.style.display = "none";
-      x.style.display = "none";
-      y.style.display = "block";
-      z.style.display = "none";
-    }
+    document.getElementById("PageAPropos").style.display = "block";
+    document.getElementById("PageJouer").style.display = "none";
+    document.getElementById("Homepage").style.display = "none";
+    document.getElementById("PageRegles").style.display = "none";
   }
 
   function Go() {
+    Init()
     get_random_player()
-    document.getElementById("result").innerHTML = ''
+    document.getElementById("life").textContent = 3
+    document.getElementById("life").style.color = 'rgba(0, 253, 34, 0.979)'
     result.setAttribute("id", "result");
-    var v = document.getElementById("Game");
-    var u = document.getElementById('playAgainButton')
-      if (v.style.display === "none") {
-      v.style.display = "block";
-      u.style.display = "none"
-    }   
-      else {
-      v.style.display = "none";
-      u.style.display = "block"
-      }
   }
 
   function BackToMenu() {
-    var x = document.getElementById("PageJouer");
-    var y = document.getElementById("Homepage");
-    var z = document.getElementById("PageRegles");
-    var w = document.getElementById("PageAPropos");
-    if (y.style.display === "none") {
-      w.style.display = "none";
-      x.style.display = "none";
-      y.style.display = "block";
-      z.style.display = "none"
+    if (document.getElementById("Homepage").style.display === "none") {
+      document.getElementById("PageAPropos").style.display = "none";
+      document.getElementById("PageJouer").style.display = "none";
+      document.getElementById("Homepage").style.display = "block";
+      document.getElementById("PageRegles").style.display = "none"
     } else {
-      w.style.display = "none";
-      x.style.display = "block";
-      y.style.display = "none";
-      z.style.display = "none";
+      document.getElementById("PageAPropos").style.display = "none";
+      document.getElementById("PageJouer").style.display = "block";
+      document.getElementById("Homepage").style.display = "none";
+      document.getElementById("PageRegles").style.display = "none";
     }
   }
 
+
   function TryPlayerButton() {
     console.log(selected_clubs)
-    const player_tried = document.getElementById('player').value
+    const player_tried = document.getElementById('textarea-player').value
     console.log(player_tried)
     url_parameters = 'players_with_clubs?clubs=' + selected_clubs.join() + '&player=' + player_tried
     console.log(url_parameters)
@@ -127,22 +73,40 @@ function onExpandableTextareaInput({ target:elm }){
     request_player.open('GET', URL_API + url_parameters, true)
     request_player.onload = function () {
       var is_success = JSON.parse(this.response).success
-      const result = document.getElementById('result')    
+      var result = document.getElementById('result')    
       result.textContent = ''  
       const h1 = document.createElement('h1')
-      result.setAttribute("id", "result");
-
       if (request_player.status >= 200 && request_player.status < 400) {
         if (is_success) {
-          h1.textContent = 'Bien joué BG !'
-          const go_button = document.createElement('button')
-          go_button.onclick = Go()
-          go_button.value =' Encore !'
+          console.log('success')
+          h1.textContent = "Bien joué BG !"
           result.appendChild(h1)
-          result.append(go_button)
+          document.getElementById("submitbutton").style.display = "none"
+          document.getElementById("replay").innerHTML = '<button value=Jouer encore ?" onclick="Go()">Un nouveau joueur ?</button>'
         } else {
-          h1.textContent = 'Hmmm non désolé mauvais..'
-          result.appendChild(h1)
+          var life_value = document.getElementById("life")
+          console.log(life_value.textContent)
+          var new_life_value = parseInt(life_value.textContent) - 1
+          life_value.textContent = new_life_value
+          if (new_life_value == 2){
+            life_value.style.color = 'orange'
+          }
+          if (new_life_value == 1){
+            life_value.style.color = 'red'
+          }
+          if (life_value.textContent > 0) {
+            h1.textContent = 'Essaie encore'
+            result.appendChild(h1)
+          }
+          else {
+            document.getElementById("submitbutton").style.display = "None"
+            document.getElementById("textarea-player").style.display = "None"
+            h1.textContent = 'Game Over'
+            result.appendChild(h1)
+            var playagain = document.getElementById("replay")
+            playagain.innerHTML = '<button value="Retente ta chance ?" onclick="Go()">Retente ta chance</button>'
+            playagain.style.display = 'block'
+          }
         }
       } else {
         console.log('error')
@@ -163,6 +127,7 @@ function onExpandableTextareaInput({ target:elm }){
       [array[currentIndex], array[randomIndex]] = [
         array[randomIndex], array[currentIndex]];
     }
+    console.log(array.slice(0,3))
     return array.slice(0,3);
   }
 
@@ -192,3 +157,4 @@ function get_random_player() {
   }
   request.send()
 }
+

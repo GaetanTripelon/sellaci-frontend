@@ -18,42 +18,41 @@
     <link rel="stylesheet" href="style.css">
     <script src="jquery.js"></script>
     <link href='https://fonts.googleapis.com/css?family=Baloo+2' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Kalam' rel='stylesheet'>
 </head>
 <body>
     <div id="title">
         <div>
-            <h1 class="text-center text-uppercase font-weight-bold">Sellaci</h1>
+            <h1 class="text-center text-uppercase font-weight-bold"><a href="./">Sellaci</a></h1>
         </div>
         <div id="Homepage">
-            <button id="play" onclick="Play()">Play</button><br><br>
+            <button id="play" onclick="Go()">Play</button><br><br>
             <button id="rules" onclick="Rules()">Rules</button><br><br>
             <button id="aboutus" onclick="AboutUs()">About Us</button>
         </div>
         <div id="PageJouer" style="display:none">
-            <button id="playAgainButton" onclick="Go()">Go!</button>
-            <div id="Game" style="display:none">
-                <div id="clubs">
-                    <h2>Clubs joués</h2>
-                </div>       
-                <div id="clublist"></div>   
-                <div id="playername">
-                    <div id="who">
-                        <h2>Qui suis-je ?</h2>
-                    </div>
-                    <div id="enterthename">
-                        <textarea class="form-control" id="player" rows="1" placeholder="Nom du joueur"></textarea>
-                    </div>               
+            <div id="clubs">
+                <h2>Clubs joués</h2>
+            </div>       
+            <div id="clublist"></div>   
+            <div id="playername">
+                <div id="who">
+                    <h2>Qui suis-je ?</h2>
                 </div>
-                <div id="time">
-                    <p>Temps restant:  <span id="timer" style="color:red; font-weight:bold">180</span>  secondes</p>
-                </div>
-                <div id="submitbutton">
-                    <div>
-                        <input type="submit" value="Soumettre" onclick="TryPlayerButton()">
-                    </div>
-                    <div id="result"></div>
+                <div id="enterthename">
+                    <textarea class="form-control" id="textarea-player" rows="1" placeholder="Nom du joueur"></textarea>
+                </div>               
+            </div>
+            <div id="heart-points">
+                <p>Vies restantes : <br><span id="life">3</span></p>
+            </div>
+            <div id="submitbutton">
+                <div>
+                    <input type="submit" value="Soumettre" onclick="TryPlayerButton()">
                 </div>
             </div>
+            <div id="result"></div>
+            <div id="replay"></div>
         </div> 
         <div id="PageRegles" style="display:none">
             <div id="Regles">

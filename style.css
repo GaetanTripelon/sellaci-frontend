@@ -7,7 +7,7 @@ body
     background-image: linear-gradient(0deg, #6ec7f5 0%, #021d20 100%);
     background-repeat: no-repeat;    
 }
-#player
+#textarea-player
 {
     margin: auto;
     max-width: fit-content;
@@ -64,4 +64,32 @@ input[type=submit]:hover
 #time
 {
     margin-top: 20px;
+}
+button
+{
+    margin-top: 150px;
+    border-radius: 20px;
+    width: 500px;
+    height: 50px;
+    background-color: grey;
+    color: white;
+    font-family: "Kalam", arial, Arial, Helvetica;
+}
+h1 a
+{
+    color:white;
+}
+h1 a:hover
+{
+    color:white;
+}
+#heart-points
+{
+    margin-top: 20px;
+}
+#life
+{
+    color : rgba(0, 253, 34, 0.979);
+    font-weight: bold;
+    font-size: 50px;
 }
