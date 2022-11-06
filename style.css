@@ -2,10 +2,8 @@ body
 {
     text-align: center;
     font-family: "Baloo 2",arial, helvetica;
-    color: azure;
-    background-color: #6ec7f5;
-    background-image: linear-gradient(0deg, #6ec7f5 0%, #021d20 100%);
-    background-repeat: no-repeat;    
+    color: rgb(7, 41, 41);
+    background-color: rgb(231, 231, 231);
 }
 #textarea-player
 {
@@ -15,7 +13,7 @@ body
 #playername #playedclubs
 {
     font-weight: bold;
-    margin-top: 50px;
+    margin-top: 10%;
 }
 #Page2
 {
@@ -41,21 +39,20 @@ input[type=submit]:hover
     font-family: "Baloo 2", arial, helvetica;
     border-radius: 5px;
 }
-#clubs
+#clubs h2
 {
-    margin-top: 40px;
+    margin-top: 10%;
+    margin-bottom: 10%;
+
 }
-#clublist
+#clublist h1
 {
-    margin-top: 50px;
-}
-#submitbutton
-{
-    margin-top: 50px;
+    margin-top: 5%;
+    font-size: 150%;
 }
 #who
 {
-    margin-top: 50px;
+    margin-top: 10%;
 }
 #enterthename
 {
@@ -67,21 +64,19 @@ input[type=submit]:hover
 }
 button
 {
-    margin-top: 150px;
+    margin-top: 20%;
     border-radius: 20px;
-    width: 500px;
+    width: 80%;
     height: 50px;
-    background-color: grey;
-    color: white;
+    background-color: #ffcf00;
+    color: rgb(97, 97, 97);
     font-family: "Kalam", arial, Arial, Helvetica;
+    font-size : 200%;
+    align-items: center;
 }
 h1 a
 {
-    color:white;
-}
-h1 a:hover
-{
-    color:white;
+    color:rgb(0, 0, 0);
 }
 #heart-points
 {
@@ -89,7 +84,8 @@ h1 a:hover
 }
 #life
 {
-    color : rgba(0, 253, 34, 0.979);
+    color : rgba(57, 151, 70, 0.979);
+    text-shadow: 2px 2px black;
     font-weight: bold;
     font-size: 50px;
 }

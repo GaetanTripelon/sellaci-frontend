@@ -91,12 +91,13 @@ URL_API = 'http://app-sellaci.eu-central-1.elasticbeanstalk.com/'
           if (new_life_value == 2){
             life_value.style.color = 'orange'
           }
-          if (new_life_value == 1){
+          else if (new_life_value == 1){
             life_value.style.color = 'red'
           }
           if (life_value.textContent > 0) {
             h1.textContent = 'Essaie encore'
             result.appendChild(h1)
+            result.style.display = 'block'
           }
           else {
             document.getElementById("submitbutton").style.display = "None"
