@@ -103,6 +103,7 @@ URL_API = 'http://app-sellaci.eu-central-1.elasticbeanstalk.com/'
             document.getElementById("submitbutton").style.display = "None"
             document.getElementById("textarea-player").style.display = "None"
             h1.textContent = 'Game Over'
+            h1.textContent = 'result'
             result.appendChild(h1)
             var playagain = document.getElementById("replay")
             playagain.innerHTML = '<button value="Retente ta chance ?" onclick="Go()">Retente ta chance</button>'
