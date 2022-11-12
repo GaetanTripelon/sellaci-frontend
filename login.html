@@ -6,33 +6,11 @@
 </head>
 
 <body>
-    Email: <input type='text' id='email'>
-    Password: <input type='password' id='password'>
-    <button type='button' onclick="hihi()">
+    <form action="index.html">
+        Email: <input type='text' id='email'>
+        Password: <input type='password' id='password'>
+        <input type="submit" value="Go to Play" />
+    </form>
 </body>
-
-<script>
-function sendData(path, parameters, method='post') {
-
-const form = document.createElement('form');
-form.method = method;
-form.action = path;
-document.body.appendChild(form);
-
-for (const key in parameters) {
-    const formField = document.createElement('input');
-    formField.type = 'hidden';
-    formField.name = key;
-    formField.value = parameters[key];
-
-    form.appendChild(formField);
-}
-form.submit();
-};
-
-function hihi(){
-    sendData('http://127.0.0.1:5000/login/', {email: 'hello world', password: '1'})
-}
-</script>
 
 </html>
