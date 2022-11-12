@@ -16,4 +16,3 @@ jobs:
         env:
           GCP_SERVICE_ACCOUNT_KEY_FILE: ${{ secrets.GCP_CREDENTIALS }}
           GCP_STORAGE_BUCKET: 'sellaci.com'
-          SOURCE_DIR: "public"
