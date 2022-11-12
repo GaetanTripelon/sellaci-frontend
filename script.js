@@ -76,6 +76,7 @@ URL_API = 'https://sellaci-367920.ew.r.appspot.com/'
       var result = document.getElementById('result')    
       result.textContent = ''  
       const h1 = document.createElement('h1')
+      const h2 = document.createElement('h2')
       if (request_player.status >= 200 && request_player.status < 400) {
         if (is_success) {
           console.log('success')
@@ -102,9 +103,12 @@ URL_API = 'https://sellaci-367920.ew.r.appspot.com/'
           else {
             document.getElementById("submitbutton").style.display = "None"
             document.getElementById("textarea-player").style.display = "None"
-            h1.textContent = 'Game Over'
-            h1.textContent = PLAYER_RESULT
+            h1.textContent = 'Game Over, it was '
+            h2.textContent = PLAYER_RESULT
+            h2.style.color = 'red'
+            h2.style.bold
             result.appendChild(h1)
+            result.appendChild(h2)
             var playagain = document.getElementById("replay")
             playagain.innerHTML = '<button value="Retente ta chance ?" onclick="Go()">Retente ta chance</button>'
             playagain.style.display = 'block'

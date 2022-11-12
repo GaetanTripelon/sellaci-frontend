@@ -1,7 +1,7 @@
 body
 {
     text-align: center;
-    font-family: "Baloo 2",arial, helvetica;
+    font-family: "Barlow Condensed",arial, helvetica;
     color: rgb(7, 41, 41);
     background-color: rgb(231, 231, 231);
 }
@@ -29,14 +29,14 @@ input [type=submit]
     border-color: aquamarine;
     background-color: #021d20;
     color: aliceblue;
-    font-family: "Baloo 2", arial, helvetica;
+    font-family: "Barlow Condensed", arial, helvetica;
 }
 input[type=submit]:hover 
 {
     border-color: aquamarine;
     background-color: #021d20;
     color: aliceblue;
-    font-family: "Baloo 2", arial, helvetica;
+    font-family: "Barlow Condensed", arial, helvetica;
     border-radius: 5px;
 }
 #clubs h2
@@ -70,7 +70,7 @@ button
     height: 50px;
     background-color: #ffcf00;
     color: rgb(97, 97, 97);
-    font-family: "Kalam", arial, Arial, Helvetica;
+    font-family: "Barlow Condensed", arial, Arial, Helvetica;
     font-size : 200%;
     align-items: center;
 }
