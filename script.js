@@ -24,6 +24,7 @@ URL_API = 'https://sellaci-367920.ew.r.appspot.com/'
     document.getElementById("textarea-player").value = "";
     document.getElementById("result").innerHTML = '';
     document.getElementById('replay').innerHTML = '' ;
+    document.getElementById('score').innerHTML = '0';
   }
 
   function Rules() {
@@ -84,6 +85,10 @@ URL_API = 'https://sellaci-367920.ew.r.appspot.com/'
           result.appendChild(h1)
           document.getElementById("submitbutton").style.display = "none"
           document.getElementById("replay").innerHTML = '<button value=Jouer encore ?" onclick="Go()">Un nouveau joueur ?</button>'
+          var score_value = document.getElementById('score')
+          console.log(score_value.textContent)
+          var new_score_value = parseInt(score_value.textContent) + 1
+          score_value.textContent = new_score_value
         } else {
           var life_value = document.getElementById("life")
           console.log(life_value.textContent)
@@ -103,12 +108,11 @@ URL_API = 'https://sellaci-367920.ew.r.appspot.com/'
           else {
             document.getElementById("submitbutton").style.display = "None"
             document.getElementById("textarea-player").style.display = "None"
-            h1.textContent = 'Game Over, it was '
-            h2.textContent = PLAYER_RESULT
-            h2.style.color = 'red'
-            h2.style.bold
-            result.appendChild(h1)
+            h2.textContent = 'Game Over, it was '
+            h1.textContent = PLAYER_RESULT
+            h1.style.color = 'red'
             result.appendChild(h2)
+            result.appendChild(h1)
             var playagain = document.getElementById("replay")
             playagain.innerHTML = '<button value="Retente ta chance ?" onclick="Go()">Retente ta chance</button>'
             playagain.style.display = 'block'
