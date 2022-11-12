@@ -1,4 +1,4 @@
-URL_API = 'http://app-sellaci.eu-central-1.elasticbeanstalk.com/'
+URL_API = 'https://sellaci-367920.ew.r.appspot.com/'
 //URL_API = 'http://127.0.0.1:5000/'
 
   // global delegated event listener
@@ -12,7 +12,7 @@ URL_API = 'http://app-sellaci.eu-central-1.elasticbeanstalk.com/'
     Page2.style.display = Jouer.click ? "block" : "none";
   }*/
 
-
+  var PLAYER_RESULT = ''
 
   function Init() {
     document.getElementById("PageJouer").style.display = "block";
@@ -103,7 +103,7 @@ URL_API = 'http://app-sellaci.eu-central-1.elasticbeanstalk.com/'
             document.getElementById("submitbutton").style.display = "None"
             document.getElementById("textarea-player").style.display = "None"
             h1.textContent = 'Game Over'
-            h1.textContent = 'result'
+            h1.textContent = PLAYER_RESULT
             result.appendChild(h1)
             var playagain = document.getElementById("replay")
             playagain.innerHTML = '<button value="Retente ta chance ?" onclick="Go()">Retente ta chance</button>'
@@ -145,6 +145,7 @@ function get_random_player() {
   request.onload = function () {
     var data = JSON.parse(this.response)
     console.log(data)
+    PLAYER_RESULT = data.Name
     selected_clubs = shuffle(data.Teams)
     if (request.status >= 200 && request.status < 400) {
       selected_clubs.forEach(club => {
