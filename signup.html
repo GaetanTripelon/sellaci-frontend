@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="config.js"></script>
+    <title>Créer un compte</title>
+</head>
+
+<body>
+    Créer un compte
+    <form method="POST" id="signup_action">
+        Email: <input type='text' name='email'>
+        Password: <input type='password' name='password'>
+        <input type="submit" value="Je m'inscris" id='trial'/>
+    </form>
+    <div id='error_signup_message'></div>
+    <form action="login.html">
+        <input type="submit" value="J'ai déjà un compte">
+    </form>
+</body>
+
+<script>
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    const error_param = urlParams.get('error')
+    if (error_param) {
+        document.getElementById('error_signup_message').textContent = error_param
+    }
+    document.getElementById('signup_action').action = URL_API + "/signup"
+</script>    
+
+</html>

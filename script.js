@@ -1,6 +1,3 @@
-URL_API = 'https://sellaci-367920.ew.r.appspot.com/'
-//URL_API = 'http://127.0.0.1:5000/'
-
   // global delegated event listener
   /*document.addEventListener('input', onExpandableTextareaInput)
   document.addEventListener('input', onExpendableSelectInput)
@@ -38,6 +35,11 @@ URL_API = 'https://sellaci-367920.ew.r.appspot.com/'
     document.getElementById("PageJouer").style.display = "none";
     document.getElementById("Homepage").style.display = "none";
     document.getElementById("PageRegles").style.display = "none";
+  }
+
+  function Logout(){
+    console.log('here')
+    window.location.href = URL_API + "logout";
   }
 
   function Go() {
@@ -167,10 +169,3 @@ function get_random_player() {
   }
   request.send()
 }
-var input = document.getElementById('textarea-player');
-input.addEventListener("keypress",function(event) {
-  if (event.key === "Enter") {
-    event.preventDefault();
-    document.getElementById("myBtn").click();
-  }
-});

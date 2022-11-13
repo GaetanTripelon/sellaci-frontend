@@ -2,15 +2,24 @@
 <html>
 
 <head>
+    <script src="config.js"></script>
     <title>Login</title>
 </head>
 
 <body>
-    <form action="index.html">
-        Email: <input type='text' id='email'>
-        Password: <input type='password' id='password'>
-        <input type="submit" value="Go to Play" />
+    S'enregistrer
+    <form method="POST" id="login_action">
+        Email: <input type='text' name='email'>
+        Password: <input type='password' name='password'>
+        <input type="submit" value="Je me connecte" id='trial'/>
+    </form>
+    <form action="signup.html">
+        <input type="submit" value="Je me créé un compte">
     </form>
 </body>
+
+<script>
+    document.getElementById('login_action').action = URL_API + "/login"
+</script>
 
 </html>
