@@ -24,8 +24,7 @@ URL_API = 'https://sellaci-367920.ew.r.appspot.com/'
     document.getElementById("textarea-player").value = "";
     document.getElementById("result").innerHTML = '';
     document.getElementById('replay').innerHTML = '' ;
-    document.getElementById('score').innerHTML = '0';
-  }
+      }
 
   function Rules() {
     document.getElementById("PageRegles").style.display = "block";
@@ -113,6 +112,7 @@ URL_API = 'https://sellaci-367920.ew.r.appspot.com/'
             h1.style.color = 'red'
             result.appendChild(h2)
             result.appendChild(h1)
+            score_value = score_value.textContent - score_value.textContent
             var playagain = document.getElementById("replay")
             playagain.innerHTML = '<button value="Retente ta chance ?" onclick="Go()">Retente ta chance</button>'
             playagain.style.display = 'block'
@@ -168,4 +168,10 @@ function get_random_player() {
   }
   request.send()
 }
-
+var input = document.getElementById('textarea-player');
+input.addEventListener("keypress",function(event) {
+  if (event.key === "Enter") {
+    event.preventDefault();
+    document.getElementById("myBtn").click();
+  }
+});

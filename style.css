@@ -2,8 +2,8 @@ body
 {
     text-align: center;
     font-family: "Barlow Condensed",arial, helvetica;
-    color: rgb(7, 41, 41);
-    background-color: rgb(231, 231, 231);
+    color: rgb(64, 172, 172);
+    background-color: rgb(20, 20, 20);
 }
 #textarea-player
 {
@@ -41,33 +41,32 @@ input[type=submit]:hover
 }
 #clubs h2
 {
-    margin-top: 10%;
-    margin-bottom: 10%;
+    margin-top: 4%;
+    margin-bottom: 1%;
+    font-size: 400%;
+    text-decoration: underline;
+    color: rgb(201, 186, 186);
 
 }
 #clublist h1
 {
-    margin-top: 5%;
-    font-size: 150%;
+    margin-top: 1%;
+    font-size: 300%;
 }
 #who
 {
-    margin-top: 10%;
+    margin-top: 4%;
 }
 #enterthename
 {
-    margin-top: 20px;
-}
-#time
-{
-    margin-top: 20px;
+    margin-top: 1%;
 }
 button
 {
-    margin-top: 5%;
+    margin-top: 2%;
     border-radius: 20px;
-    width: 80%;
-    height: 50px;
+    width: 50%;
+    height: 20%;
     background-color: #ffcf00;
     color: rgb(97, 97, 97);
     font-family: "Barlow Condensed", arial, Arial, Helvetica;

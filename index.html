@@ -24,7 +24,7 @@
 <body>
     <div id="title">
         <div>
-            <h1 class="text-center text-uppercase font-weight-bold"><a href="./">Sellaci</a></h1>
+            <h1 class="text-center text-uppercase font-weight-bold">Sellaci</h1>
         </div>
         <div id="Homepage">           
             <button id="play" onclick="Go()">Play</button><br><br>
@@ -43,9 +43,9 @@
                 <div id="who">
                     <h2>Qui suis-je ?</h2>
                 </div>
-                <div id="enterthename">
-                    <textarea class="form-control" id="textarea-player" rows="1" placeholder="Nom du joueur"></textarea>
-                </div>               
+                <form id="enterthename">
+                    <input type="text" class="form-control" id="textarea-player" rows="1" placeholder="Nom du joueur" ng-keypress="getkeys($event)" ng-model="newMessageContent"></input>
+                </form>               
             </div>
             <div id="heart-points">
                 <p>Vies restantes : <br><span id="life">3</span></p>
@@ -54,9 +54,12 @@
             </div>
             <div id="result"></div>
             <div id="submitbutton">
-                <button onclick="TryPlayerButton()">Soumettre</button>
+                <button onclick="TryPlayerButton()" id="myBtn">Soumettre</button>
             </div>
             <div id="replay"></div>
+            <div id="abandon">
+                <button onclick="BackToMenu()">Abandonner</button>
+            </div>
         </div> 
         <div id="PageRegles" style="display:none">
             <div id="Regles">
