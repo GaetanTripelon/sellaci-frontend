@@ -112,7 +112,6 @@ URL_API = 'https://sellaci-367920.ew.r.appspot.com/'
             h1.style.color = 'red'
             result.appendChild(h2)
             result.appendChild(h1)
-            score_value = score_value.textContent - score_value.textContent
             var playagain = document.getElementById("replay")
             playagain.innerHTML = '<button value="Retente ta chance ?" onclick="Go()">Retente ta chance</button>'
             playagain.style.display = 'block'

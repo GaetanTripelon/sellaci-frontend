@@ -15,10 +15,11 @@ body
     font-weight: bold;
     margin-top: 10%;
 }
-#Page2
+#PageRegles #PageAPropos
 {
     color: azure;
     margin-top: 5%;
+    font-size: 300%;
 }
 #title
 {
@@ -41,21 +42,22 @@ input[type=submit]:hover
 }
 #clubs h2
 {
-    margin-top: 4%;
+    margin-top: 2%;
     margin-bottom: 1%;
-    font-size: 400%;
+    font-size: 200%;
     text-decoration: underline;
-    color: rgb(201, 186, 186);
-
+    color: #ffcf00;
 }
 #clublist h1
 {
     margin-top: 1%;
-    font-size: 300%;
+    font-size: 200%;
 }
 #who
 {
-    margin-top: 4%;
+    margin-top: 5%;
+    font-style: italic;
+    color: #ffcf00;
 }
 #enterthename
 {
@@ -79,7 +81,8 @@ h1 a
 }
 #heart-points
 {
-    margin-top: 20px;
+    margin-top: 1%;
+    font-size: 175%;
 }
 #life
 {
@@ -98,4 +101,12 @@ h1 a
 #score-count
 {
     font-size: 22px;
+}
+#texteregles
+{
+    font-size: 200%;
+}
+#texteapropos
+{
+    font-size: 200%;
 }
