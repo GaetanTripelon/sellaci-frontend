@@ -4,18 +4,20 @@
 <head>
     <script src="config.js"></script>
     <title>Créer un compte</title>
+    <link rel="stylesheet" href="signup.css">
+    <link href='https://fonts.googleapis.com/css?family=Barlow+Condensed' rel='stylesheet'>
 </head>
 
 <body>
-    Créer un compte
+    <p id="create">Créer un compte</p>
     <form method="POST" id="signup_action">
-        Email: <input type='text' name='email'>
-        Password: <input type='password' name='password'>
+        <p id="email">Email:</p><input type='text' name='email' id="email_box">
+        <p id="password">Password:</p><input type='password' name='password' id="password_box"><br>
         <input type="submit" value="Je m'inscris" id='trial'/>
     </form>
     <div id='error_signup_message'></div>
     <form action="login.html">
-        <input type="submit" value="J'ai déjà un compte">
+        <input type="submit" value="J'ai déjà un compte" id="account_already_on">
     </form>
 </body>
 

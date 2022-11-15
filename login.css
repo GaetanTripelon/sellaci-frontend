@@ -1,0 +1,60 @@
+body
+{
+    background-color: rgb(20, 20, 20);
+    text-align: center;
+    margin-top: 10%;
+}
+#register
+{
+    font-family: "Barlow Condensed",arial, helvetica;
+    font-size: 500%;
+    color: rgb(64, 172, 172);
+}
+#email
+{
+    font-family: "Barlow Condensed",arial, helvetica;
+    font-size: 200%;
+    color :#ffcf00;
+}
+#password
+{
+    font-family: "Barlow Condensed",arial, helvetica;
+    font-size: 200%;
+    color :#ffcf00;
+}
+#email_box
+{
+    text-align: center;
+    font-family: "Barlow Condensed",arial, helvetica;
+    font-size: 200%;
+    border-radius: 50px;
+    width: 40%;
+    border-color: coral;
+    border-style: solid;
+}
+#password_box
+{
+    text-align: center;
+    font-family: "Barlow Condensed",arial, helvetica;
+    font-size: 200%;
+    border-radius: 50px;
+    width: 40%;
+    border-color: coral;
+    border-style: solid;
+}
+#trial
+{
+    margin-top: 10%;
+    font-family: "Barlow Condensed",arial, helvetica;
+    font-size: 200%;
+    border-radius: 50px;
+    width: 30%;
+}
+#create
+{
+    margin-top: 5%;
+    font-family: "Barlow Condensed",arial, helvetica;
+    font-size: 200%;
+    border-radius: 50px;
+    width: 30%;
+}
