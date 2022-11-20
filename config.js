@@ -1,2 +1,2 @@
-URL_API = 'https://sellaci-367920.ew.r.appspot.com/'
-//URL_API = 'http://127.0.0.1:5000/'
+URL_API = 'https://sellaci-backend-ryorpt6iha-od.a.run.app/'
+//URL_API = 'http://0.0.0.0:9090/'

@@ -154,7 +154,7 @@ function get_random_player() {
   request.onload = function () {
     var data = JSON.parse(this.response)
     console.log(data)
-    PLAYER_RESULT = data.Name
+    PLAYER_RESULT = data.ShortName
     selected_clubs = shuffle(data.Teams)
     if (request.status >= 200 && request.status < 400) {
       selected_clubs.forEach(club => {
