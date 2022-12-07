@@ -12,11 +12,9 @@
 
 <body>
     <p id="create">Créer un compte</p>
-    <form method="POST" id="signup_action">
-        <p id="email">Email:</p><input type='text' name='email' id="email_box">
-        <p id="password">Password:</p><input type='password' name='password' id="password_box"><br>
-        <input type="submit" value="Je m'inscris" id='trial'/>
-    </form>
+    <p id="email">Email:</p><input type='text' name='email' id="email_box">
+    <p id="password">Password:</p><input type='password' name='password' id="password_box"><br>
+    <input type="submit" value="Je m'inscris" id='trial' onclick="signup()"/>
     <div id='error_signup_message'></div>
     <form action="login.html">
         <input type="submit" value="J'ai déjà un compte" id="account_already_on">
@@ -24,13 +22,44 @@
 </body>
 
 <script>
-    const queryString = window.location.search;
-    const urlParams = new URLSearchParams(queryString);
-    const error_param = urlParams.get('error')
-    if (error_param) {
-        document.getElementById('error_signup_message').textContent = error_param
+
+    function signup(){
+        data = {
+            "email": document.getElementById("email_box").value,
+            "password": document.getElementById("password_box").value,
+        }
+
+        console.log(data)
+
+        postData(URL_API + "signup", data)
+            .then((login_success) => {
+                if(login_success['success']){
+                    console.log('LOGIN SUCCESS')
+                    window.location = "play.html";
+                }else{
+                    console.log('LOGIN FAIL')
+                }
+            }
+        );
     }
-    document.getElementById('signup_action').action = URL_API + "signup"
-</script>    
+
+    // Example POST method implementation:
+    async function postData(url = '', data = {}) {
+        const response = await fetch(url, {
+            method: 'POST', 
+            mode: 'cors', 
+            cache: 'no-cache', 
+            credentials: 'same-origin', 
+            headers: {
+            'Content-Type': 'application/json'
+            },
+            redirect: 'follow', 
+            referrerPolicy: 'no-referrer',
+            body: JSON.stringify(data) 
+        });
+        return response.json();
+    }
+    
+</script> 
 
 </html>

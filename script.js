@@ -38,8 +38,7 @@
   }
 
   function Logout(){
-    console.log('here')
-    window.location.href = URL_API + "logout";
+    window.location = "login.html";
   }
 
   function Go() {

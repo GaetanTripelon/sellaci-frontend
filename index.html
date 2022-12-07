@@ -11,13 +11,13 @@
 </head>
 
 <body>
-    <form method="POST" id="first_action">
-        <input type="submit" id="play" value="Jouer à Sellaci"/>
-    </form>
+    <input type="submit" id="play" value="Jouer à Sellaci" onclick="play()"/>
 </body>
 
 <script>
-    document.getElementById('first_action').action = URL_API + "login"
+    function play(){
+        window.location = "login.html";
+    }
 </script>
 
 </html>
