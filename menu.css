@@ -1,0 +1,123 @@
+body
+{
+    text-align: center;
+    font-family: "Barlow Condensed",arial, helvetica;
+    color: rgb(64, 172, 172);
+    background-color: rgb(20, 20, 20);
+}
+img
+{
+    font-family: "Barlow Condensed",arial, helvetica;
+    font-size: 500%;
+    margin-top: 0;
+    width: 25%;
+}
+#textarea-player
+{
+    margin: auto;
+    max-width: fit-content;
+}
+#playername #playedclubs
+{
+    font-weight: bold;
+    margin-top: 10%;
+}
+#PageRegles #PageAPropos
+{
+    color: azure;
+    margin-top: 5%;
+    font-size: 300%;
+}
+#title
+{
+    margin-top: 2%;
+}
+button
+{
+    border-color: aquamarine;
+    background-color: #021d20;
+    color: black;
+    font-family: "Barlow Condensed", arial, helvetica;
+}
+button:hover 
+{
+    border-color: aquamarine;
+    background-color: #021d20;
+    color: white;
+    font-family: "Barlow Condensed", arial, helvetica;
+    
+}
+#clubs h2
+{
+    margin-top: 2%;
+    margin-bottom: 1%;
+    font-size: 200%;
+    text-decoration: underline;
+    color: #fff;
+}
+#clublist h1
+{
+    margin-top: 1%;
+    font-size: 200%;
+}
+#who
+{
+    margin-top: 5%;
+    font-style: italic;
+    color: #fff;
+}
+#enterthename
+{
+    margin-top: 1%;
+}
+button
+{
+    margin-top: 2%;
+    border-radius: 20px;
+    width: 50%;
+    height: 20%;
+    background-color:#fff;
+    color: rgb(97, 97, 97);
+    font-family: "Barlow Condensed", arial, Arial, Helvetica;
+    font-size : 200%;
+    align-items: center;
+}
+h1 a
+{
+    color:rgb(0, 0, 0);
+}
+#heart-points
+{
+    margin-top: 1%;
+    font-size: 175%;
+}
+#life
+{
+    color : rgba(57, 151, 70, 0.979);
+    text-shadow: 2px 2px black;
+    font-weight: bold;
+    font-size: 50px;
+}
+#score
+{
+    color : rgba(255, 145, 0, 0.979);
+    text-shadow: 2px 2px black;
+    font-weight: bold;
+    font-size: 50px;
+}
+#score-count
+{
+    font-size: 22px;
+}
+#texteregles
+{
+    font-size: 200%;
+}
+#texteapropos
+{
+    font-size: 200%;
+}
+img:hover
+{
+    cursor:grab;
+}

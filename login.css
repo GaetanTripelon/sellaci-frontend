@@ -8,19 +8,19 @@ body
 {
     font-family: "Barlow Condensed",arial, helvetica;
     font-size: 500%;
-    color: rgb(64, 172, 172);
+    color: aquamarine;
 }
 #email
 {
     font-family: "Barlow Condensed",arial, helvetica;
     font-size: 200%;
-    color :#ffcf00;
+    color :#fff;
 }
 #password
 {
     font-family: "Barlow Condensed",arial, helvetica;
     font-size: 200%;
-    color :#ffcf00;
+    color :#fff;
 }
 #email_box
 {
@@ -29,7 +29,7 @@ body
     font-size: 200%;
     border-radius: 50px;
     width: 40%;
-    border-color: coral;
+    border-color: aquamarine;
     border-style: solid;
 }
 #password_box
@@ -39,13 +39,26 @@ body
     font-size: 200%;
     border-radius: 50px;
     width: 40%;
-    border-color: coral;
+    border-color: aquamarine;
     border-style: solid;
 }
 #trial
 {
     margin-top: 10%;
-    font-family: "Barlow Condensed",arial, helvetica;
+    border-color: aquamarine;
+    background-color: #fff;
+    color: black;
+    font-family: "Barlow Condensed", arial, helvetica;
+    font-size: 200%;
+    border-radius: 50px;
+    width: 40%;
+}
+#trial:hover 
+{
+    border-color: aquamarine;
+    background-color: #021d20;
+    color: white;
+    font-family: "Barlow Condensed", arial, helvetica;
     font-size: 200%;
     border-radius: 50px;
     width: 40%;
@@ -53,8 +66,43 @@ body
 #create
 {
     margin-top: 5%;
-    font-family: "Barlow Condensed",arial, helvetica;
+    border-color: aquamarine;
+    background-color: #fff;
+    color: black;
+    font-family: "Barlow Condensed", arial, helvetica;
     font-size: 200%;
     border-radius: 50px;
     width: 40%;
 }
+#create:hover 
+{
+    border-color: aquamarine;
+    background-color: #021d20;
+    color: white;
+    font-family: "Barlow Condensed", arial, helvetica;
+    font-size: 200%;
+    border-radius: 50px;
+    width: 40%;
+}
+#reset_password_action
+{
+    margin-top: 5%;
+    border-color: aquamarine;
+    background-color: #fff;
+    color: black;
+    font-family: "Barlow Condensed", arial, helvetica;
+    font-size: 200%;
+    border-radius: 50px;
+    width: 40%;
+}
+#reset_password_action:hover 
+{
+    border-color: aquamarine;
+    background-color: #021d20;
+    color: white;
+    font-family: "Barlow Condensed", arial, helvetica;
+    font-size: 200%;
+    border-radius: 50px;
+    width: 40%;
+}
+

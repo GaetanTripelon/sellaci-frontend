@@ -5,6 +5,13 @@ body
     color: rgb(64, 172, 172);
     background-color: rgb(20, 20, 20);
 }
+img
+{
+    font-family: "Barlow Condensed",arial, helvetica;
+    font-size: 500%;
+    margin-top: 0;
+    width: 25%;
+}
 #textarea-player
 {
     margin: auto;
@@ -25,20 +32,20 @@ body
 {
     margin-top: 2%;
 }
-input [type=submit]
+button
 {
     border-color: aquamarine;
     background-color: #021d20;
-    color: aliceblue;
+    color: black;
     font-family: "Barlow Condensed", arial, helvetica;
 }
-input[type=submit]:hover 
+button:hover 
 {
     border-color: aquamarine;
     background-color: #021d20;
-    color: aliceblue;
+    color: white;
     font-family: "Barlow Condensed", arial, helvetica;
-    border-radius: 5px;
+    
 }
 #clubs h2
 {
@@ -46,7 +53,7 @@ input[type=submit]:hover
     margin-bottom: 1%;
     font-size: 200%;
     text-decoration: underline;
-    color: #ffcf00;
+    color: #fff;
 }
 #clublist h1
 {
@@ -57,7 +64,7 @@ input[type=submit]:hover
 {
     margin-top: 5%;
     font-style: italic;
-    color: #ffcf00;
+    color: #fff;
 }
 #enterthename
 {
@@ -69,7 +76,7 @@ button
     border-radius: 20px;
     width: 50%;
     height: 20%;
-    background-color: #ffcf00;
+    background-color:#fff;
     color: rgb(97, 97, 97);
     font-family: "Barlow Condensed", arial, Arial, Helvetica;
     font-size : 200%;
@@ -109,4 +116,8 @@ h1 a
 #texteapropos
 {
     font-size: 200%;
+}
+img:hover
+{
+    cursor:grab;
 }

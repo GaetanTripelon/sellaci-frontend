@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- mobile metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <!-- site metas -->
+    <title>Sellaci</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="config.js"></script>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="menu.css">
+    <script src="jquery.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Baloo+2' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Kalam' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Barlow+Condensed' rel='stylesheet'>
+</head>
+<body>
+    <div id="title">
+        <div>
+            <img id ="Logo" src="Ressources/Logo_fond_transparent.png" onclick="BackToMenu()">
+        </div>
+        <div id="Homepage">           
+            <button id="play" onclick="Go()">Play</button><br><br>
+            <button id="rules" onclick="Rules()">Rules</button><br><br>
+            <button id="aboutus" onclick="AboutUs()">About Us</button><br><br>
+            <button id="logout" onclick="Logout()">Logout</button>
+        </div>
+        <div id="PageRegles" style="display:none">
+            <div id="Regles">
+                <h2>Comment jouer ?</h2>
+            </div>     
+            <div id="texteregles">
+                <p>Ce jeu est basé sur vos connaissances footballistiques actuelles.<br>Trois clubs se présentent à vous, vous devrez tout simplement deviner le joueur ayant joué pour ces trois clubs.<br>Attention, seuls les joueurs encore en activité comptent.<br>Une fois que vous pensez avoir trouvé le joueur, cliquez sur le bouton " <span style="font-style:italic; font-weight: bold; color: red;">Soumettre</span> "</p>
+            </div>
+            <button id="rules" onclick="BackToMenu()">Menu Principal</button>
+        </div>
+        <div id="PageAPropos" style="display:none">
+            <div id="APropos">
+                <h2>A propos de Sellaci</h2>
+            </div>     
+            <div id="texteapropos">
+                <p>Trois potes fans de foot jouaient à ce jeu sur la route de leur vacances pour passer le temps. La volonté était de partager aux plus fous de foot ce jeu original et qui vous fait travailler vos connaissances foot.<br>Pourquoi avoir choisi Sellaci comme nom ? A vous de le deviner...</p>
+            </div>
+            <button id="aboutus" onclick="BackToMenu()">Menu Principal</button>
+        </div>
+    </div>
+            
+</body>
+
+</html>

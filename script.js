@@ -44,12 +44,16 @@
   function Go() {
     Init()
     get_random_player()
+    document.getElementById("abandon").style.display = "block"
+    document.getElementById("retourmenu").style.display = "none"
     document.getElementById("life").textContent = 3
     document.getElementById("life").style.color = 'rgba(0, 253, 34, 0.979)'
     result.setAttribute("id", "result");
   }
 
   function BackToMenu() {
+    Init()
+    get_random_player()
     if (document.getElementById("Homepage").style.display === "none") {
       document.getElementById("PageAPropos").style.display = "none";
       document.getElementById("PageJouer").style.display = "none";
@@ -110,6 +114,8 @@
             document.getElementById("textarea-player").style.display = "None"
             h2.textContent = 'Game Over, it was '
             h1.textContent = PLAYER_RESULT
+            h2.style.color = 'white'
+            h2.style.marginTop = '5%'
             h1.style.color = 'red'
             result.appendChild(h2)
             result.appendChild(h1)
@@ -125,6 +131,24 @@
     request_player.send()
   }
 
+  function ShowPlayer_TryAgain() {
+      var result = document.getElementById('result')    
+      result.textContent = ''  
+      const h1 = document.createElement('h1')
+      const h2 = document.createElement('h2')
+            document.getElementById("submitbutton").style.display = "None"
+            h2.textContent = 'Game Over, it was '
+            h1.textContent = PLAYER_RESULT
+            h2.style.color = 'white'
+            h2.style.marginTop = '5%'
+            h2.style.fontStyle = 'italic'
+            h1.style.color = 'red'
+            result.appendChild(h2)
+            result.appendChild(h1)
+            document.getElementById("replay").innerHTML = '<button value=Jouer encore ?" onclick="Go()">Un nouveau joueur ?</button>'
+            document.getElementById("abandon").style.display = "None"
+            document.getElementById("retourmenu").innerHTML = '<button value=Retour" onclick="BackToMenu()">Retour au menu</button>'
+  }
 
   function shuffle(array) {
     let currentIndex = array.length,  randomIndex;

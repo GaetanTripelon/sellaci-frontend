@@ -3,13 +3,8 @@ body
     background-color: rgb(20, 20, 20);
     text-align: center;
 }
-#play
+img
 {
-    font-family: "Barlow Condensed",arial, helvetica;
-    font-size: 500%;
-    margin-top: 25%;
-    color: rgb(64, 172, 172);
     border-radius: 50px;
-    width: 75%;
-    background-color: #ffcf00;;
+    width: 50%;
 }

@@ -25,13 +25,7 @@
 <body>
     <div id="title">
         <div>
-            <h1 class="text-center text-uppercase font-weight-bold">Sellaci</h1>
-        </div>
-        <div id="Homepage">           
-            <button id="play" onclick="Go()">Play</button><br><br>
-            <button id="rules" onclick="Rules()">Rules</button><br><br>
-            <button id="aboutus" onclick="AboutUs()">About Us</button><br><br>
-            <button id="logout" onclick="Logout()">Logout</button>
+            <img id ="Logo" src="Ressources/Logo_fond_transparent.png" onclick="BackToMenu()">
         </div>
         <div id="PageJouer" style="display:none">
             <div id="score-count">
@@ -59,28 +53,11 @@
                 <button onclick="TryPlayerButton()" id="myBtn">Soumettre</button>
             </div>
             <div id="replay"></div>
+            <div id="retourmenu"></div>
             <div id="abandon">
-                <button onclick="BackToMenu()">Abandonner</button>
+                <button onclick="ShowPlayer_TryAgain()">Abandonner</button>
             </div>
         </div> 
-        <div id="PageRegles" style="display:none">
-            <div id="Regles">
-                <h2>Comment jouer ?</h2>
-            </div>     
-            <div id="texteregles">
-                <p>Ce jeu est basé sur vos connaissances footballistiques actuelles.<br>Trois clubs se présentent à vous, vous devrez tout simplement deviner le joueur ayant joué pour ces trois clubs.<br>Attention, seuls les joueurs encore en activité comptent.<br>Une fois que vous pensez avoir trouvé le joueur, cliquez sur le bouton " <span style="font-style:italic; font-weight: bold; color: red;">Soumettre</span> "</p>
-            </div>
-            <button id="rules" onclick="BackToMenu()">Menu Principal</button>
-        </div>
-        <div id="PageAPropos" style="display:none">
-            <div id="APropos">
-                <h2>A propos de Sellaci</h2>
-            </div>     
-            <div id="texteapropos">
-                <p>Trois potes fans de foot jouaient à ce jeu sur la route de leur vacances pour passer le temps. La volonté était de partager aux plus fous de foot ce jeu original et qui vous fait travailler vos connaissances foot.<br>Pourquoi avoir choisi Sellaci comme nom ? A vous de le deviner...</p>
-            </div>
-            <button id="aboutus" onclick="BackToMenu()">Menu Principal</button>
-        </div>
     </div>
             
 </body>
