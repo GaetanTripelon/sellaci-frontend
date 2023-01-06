@@ -25,9 +25,8 @@
 <body>
     <div id="title">
         <div>
-            <img id ="Logo" src="Ressources/Logo_fond_transparent.png" onclick="BackToMenu()">
+            <img id ="Logo" src="images/Logo_fond_transparent.png" onclick="BackToMenu()">
         </div>
-        <div id="PageJouer" style="display:none">
             <div id="score-count">
                 <p>Score : <br><span id="score">0</span></p>
             </div>
@@ -57,9 +56,14 @@
             <div id="abandon">
                 <button onclick="ShowPlayer_TryAgain()">Abandonner</button>
             </div>
-        </div> 
     </div>
             
 </body>
+
+<script>
+    function BackToMenu(){
+        window.location = "menu.html";
+    }
+</script>
 
 </html>

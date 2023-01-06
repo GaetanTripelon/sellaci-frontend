@@ -12,30 +12,12 @@
   var PLAYER_RESULT = ''
 
   function Init() {
-    document.getElementById("PageJouer").style.display = "block";
-    document.getElementById("Homepage").style.display = "none";
-    document.getElementById("PageRegles").style.display = "none";
-    document.getElementById("PageAPropos").style.display = "none";
     document.getElementById("submitbutton").style.display = 'block';
     document.getElementById("textarea-player").style.display = "block";
     document.getElementById("textarea-player").value = "";
     document.getElementById("result").innerHTML = '';
     document.getElementById('replay').innerHTML = '' ;
       }
-
-  function Rules() {
-    document.getElementById("PageRegles").style.display = "block";
-    document.getElementById("Homepage").style.display = "none";
-    document.getElementById("PageJouer").style.display = "none";
-    document.getElementById("PageAPropos").style.display = "none";
-  }
-
-  function AboutUs() {
-    document.getElementById("PageAPropos").style.display = "block";
-    document.getElementById("PageJouer").style.display = "none";
-    document.getElementById("Homepage").style.display = "none";
-    document.getElementById("PageRegles").style.display = "none";
-  }
 
   function Logout(){
     window.location = "login.html";
@@ -50,23 +32,6 @@
     document.getElementById("life").style.color = 'rgba(0, 253, 34, 0.979)'
     result.setAttribute("id", "result");
   }
-
-  function BackToMenu() {
-    Init()
-    get_random_player()
-    if (document.getElementById("Homepage").style.display === "none") {
-      document.getElementById("PageAPropos").style.display = "none";
-      document.getElementById("PageJouer").style.display = "none";
-      document.getElementById("Homepage").style.display = "block";
-      document.getElementById("PageRegles").style.display = "none"
-    } else {
-      document.getElementById("PageAPropos").style.display = "none";
-      document.getElementById("PageJouer").style.display = "block";
-      document.getElementById("Homepage").style.display = "none";
-      document.getElementById("PageRegles").style.display = "none";
-    }
-  }
-
 
   function TryPlayerButton() {
     console.log(selected_clubs)

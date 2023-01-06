@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- mobile metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <!-- site metas -->
+    <title>Sellaci</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="config.js"></script>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="aboutus.css">
+    <script src="jquery.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Baloo+2' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Kalam' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Barlow+Condensed' rel='stylesheet'>
+</head>
+<body>
+    <div id="title">
+        <div>
+            <img id ="Logo" src="images/Logo_fond_transparent.png" onclick="BackToMenu()">
+        </div>
+        <div id="Regles">
+            <h2>Comment jouer ?</h2>
+        </div>     
+        <div id="texteregles">
+            <p>Ce jeu est basé sur vos connaissances footballistiques actuelles.<br>Trois clubs se présentent à vous, vous devrez tout simplement deviner le joueur ayant joué pour ces trois clubs.<br>Attention, seuls les joueurs encore en activité comptent.<br>Une fois que vous pensez avoir trouvé le joueur, cliquez sur le bouton " <span style="font-style:italic; font-weight: bold; color: red;">Soumettre</span> "</p>
+        </div>
+        <button id="rules" onclick="BackToMenu()">Menu Principal</button>
+    </div>
+            
+</body>
+
+<script>
+    function BackToMenu(){
+        window.location = "menu.html";
+    }
+</script>
+
+</html>
