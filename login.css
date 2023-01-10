@@ -49,6 +49,7 @@ body
     background-color: #fff;
     color: black;
     font-family: "Barlow Condensed", arial, helvetica;
+    transition: all 0.5s ease-out;
     font-size: 200%;
     border-radius: 50px;
     width: 40%;
@@ -63,6 +64,11 @@ body
     border-radius: 50px;
     width: 40%;
 }
+#trial:focus
+{
+    border-color: aquamarine;
+    background-color: #021d20;
+}
 #create
 {
     margin-top: 5%;
@@ -70,6 +76,7 @@ body
     background-color: #fff;
     color: black;
     font-family: "Barlow Condensed", arial, helvetica;
+    transition: all 0.5s ease-out;
     font-size: 200%;
     border-radius: 50px;
     width: 40%;
@@ -84,6 +91,11 @@ body
     border-radius: 50px;
     width: 40%;
 }
+#create:focus
+{
+    border-color: aquamarine;
+    background-color: #021d20;
+}
 #reset_password_action
 {
     margin-top: 5%;
@@ -91,6 +103,7 @@ body
     background-color: #fff;
     color: black;
     font-family: "Barlow Condensed", arial, helvetica;
+    transition: all 0.5s ease-out;
     font-size: 200%;
     border-radius: 50px;
     width: 40%;
@@ -105,4 +118,8 @@ body
     border-radius: 50px;
     width: 40%;
 }
-
+#reset_password_actioneate:focus
+{
+    border-color: aquamarine;
+    background-color: #021d20;
+}

@@ -26,6 +26,8 @@
   function Go() {
     Init()
     get_random_player()
+    document.getElementById("who").style.display = "block"
+    document.getElementById("enterthename").style.display = "block"
     document.getElementById("abandon").style.display = "block"
     document.getElementById("retourmenu").style.display = "none"
     document.getElementById("life").textContent = 3
@@ -51,9 +53,13 @@
         if (is_success) {
           console.log('success')
           h1.textContent = "Bien joué BG !"
+          h1.style.color = 'rgba(57, 151, 70, 0.979)'
+          h1.style.fontWeight = 'bold'
           result.appendChild(h1)
           document.getElementById("submitbutton").style.display = "none"
-          document.getElementById("replay").innerHTML = '<button value=Jouer encore ?" onclick="Go()">Un nouveau joueur ?</button>'
+          document.getElementById("replay").innerHTML = '<button value=Jouer encore ?" id="myBtn4" onclick="Go()">Un nouveau joueur ?</button>'
+          document.getElementById("abandon").style.display = "None"
+          document.getElementById("retourmenu").style.display = "block"
           var score_value = document.getElementById('score')
           console.log(score_value.textContent)
           var new_score_value = parseInt(score_value.textContent) + 1
@@ -77,16 +83,25 @@
           else {
             document.getElementById("submitbutton").style.display = "None"
             document.getElementById("textarea-player").style.display = "None"
+            document.getElementById("who").style.display = "None"
+            document.getElementById("enterthename").style.display = "None"
             h2.textContent = 'Game Over, it was '
             h1.textContent = PLAYER_RESULT
             h2.style.color = 'white'
             h2.style.marginTop = '5%'
             h1.style.color = 'red'
+            h1.style.fontWeight = 'bold'
             result.appendChild(h2)
             result.appendChild(h1)
             var playagain = document.getElementById("replay")
-            playagain.innerHTML = '<button value="Retente ta chance ?" onclick="Go()">Retente ta chance</button>'
+            var score_value = document.getElementById('score')
+            console.log(score_value.textContent)
+            var new_score_value = parseInt(score_value.textContent) - (score_value.textContent)
+            score_value.textContent = new_score_value
+            playagain.innerHTML = '<button value="Retente ta chance ?" id="myBtn3" onclick="Go()">Retente ta chance</button>'
             playagain.style.display = 'block'
+            document.getElementById("abandon").style.display = "None"
+            document.getElementById("retourmenu").style.display = "block"
           }
         }
       } else {
@@ -102,17 +117,24 @@
       const h1 = document.createElement('h1')
       const h2 = document.createElement('h2')
             document.getElementById("submitbutton").style.display = "None"
+            document.getElementById("who").style.display = "None"
+            document.getElementById("enterthename").style.display = "None"
             h2.textContent = 'Game Over, it was '
             h1.textContent = PLAYER_RESULT
             h2.style.color = 'white'
             h2.style.marginTop = '5%'
             h2.style.fontStyle = 'italic'
             h1.style.color = 'red'
+            h1.style.fontWeight = 'bold'
             result.appendChild(h2)
             result.appendChild(h1)
-            document.getElementById("replay").innerHTML = '<button value=Jouer encore ?" onclick="Go()">Un nouveau joueur ?</button>'
+            document.getElementById("replay").innerHTML = '<button value=Nouvelle Partie ?" id="myBtn3" onclick="Go()">Retente ta chance</button>'
             document.getElementById("abandon").style.display = "None"
-            document.getElementById("retourmenu").innerHTML = '<button value=Retour" onclick="BackToMenu()">Retour au menu</button>'
+            document.getElementById("retourmenu").style.display = "block"
+            var score_value = document.getElementById('score')
+            console.log(score_value.textContent)
+            var new_score_value = parseInt(score_value.textContent) - (score_value.textContent)
+            score_value.textContent = new_score_value
   }
 
   function shuffle(array) {

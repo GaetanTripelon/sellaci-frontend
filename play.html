@@ -25,10 +25,15 @@
 <body>
     <div id="title">
         <div>
-            <img id ="Logo" src="images/Logo_fond_transparent.png" onclick="BackToMenu()">
+            <img id ="logo" src="images/Logo_fond_transparent.png" onclick="BackToMenu()">
         </div>
-            <div id="score-count">
-                <p>Score : <br><span id="score">0</span></p>
+            <div class="container">
+                <div id="score-count">
+                    <p>Score : <br><span id="score">0</span></p>
+                </div>
+                <div id="heart-points">
+                    <p>Vies restantes : <br><span id="life">3</span></p>
+                </div>
             </div>
             <div id="clubs">
                 <h2>Clubs joués</h2>
@@ -42,9 +47,6 @@
                     <input type="text" class="form-control" id="textarea-player" rows="1" placeholder="Nom du joueur" ng-keypress="getkeys($event)" ng-model="newMessageContent"></input>
                 </form>               
             </div>
-            <div id="heart-points">
-                <p>Vies restantes : <br><span id="life">3</span></p>
-            </div>
             <div id="showiflose" style="display:none">
             </div>
             <div id="result"></div>
@@ -52,9 +54,11 @@
                 <button onclick="TryPlayerButton()" id="myBtn">Soumettre</button>
             </div>
             <div id="replay"></div>
-            <div id="retourmenu"></div>
             <div id="abandon">
-                <button onclick="ShowPlayer_TryAgain()">Abandonner</button>
+                <button onclick="ShowPlayer_TryAgain()" id="myBtn2">Abandonner</button>
+            </div>
+            <div id="retourmenu">
+                <button value="Retour" onclick="BackToMenu()">Retour au menu</button>
             </div>
     </div>
             

@@ -3,8 +3,68 @@ body
     background-color: rgb(20, 20, 20);
     text-align: center;
 }
-img
+.container 
 {
-    border-radius: 50px;
-    width: 50%;
+    display: inline-block;
+    position: relative;
+    margin-top: 10%;
+}
+.container .text 
+{
+    z-index: 1;
+    position: absolute;
+    text-align: center;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    top: 70%;
+    font-family: "Barlow Condensed",arial, helvetica;
+    color: rgb(64, 172, 172);
+    font-size: 500%;
+    width: 70%;
+}
+.text
+{   
+    color: #fff;
+    transition: all 1s ease-in;
+    background-image: linear-gradient(
+      to right,
+      aquamarine,
+      rgba(132, 0, 255, 0.979) 70%
+    );
+    background-size: 200% 100%;
+    background-position: -100%;
+    display: inline-block;
+    padding: 20% 0;
+    position: relative;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 0.5s ease-in-out;
+}
+  
+.text:before
+{
+    content: '';
+    background: linear-gradient(
+        to right,
+        rgba(132, 0, 255, 0.979) 70%,
+        aquamarine
+      );
+    display: block;
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    transition: all 0.3s ease-in-out;
+}
+  
+.text:hover 
+{
+   background-position: 0;
+}
+  
+.text:hover::before
+{
+    width: 100%;
 }
