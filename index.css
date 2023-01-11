@@ -1,13 +1,12 @@
 body
 {
-    background-color: rgb(20, 20, 20);
+    background-color: #F43E43;
     text-align: center;
 }
 .container 
 {
     display: inline-block;
     position: relative;
-    margin-top: 10%;
 }
 .container .text 
 {
@@ -19,7 +18,7 @@ body
     right: 0;
     top: 70%;
     font-family: "Barlow Condensed",arial, helvetica;
-    color: rgb(64, 172, 172);
+    color: #fff;
     font-size: 500%;
     width: 70%;
 }
@@ -29,8 +28,8 @@ body
     transition: all 1s ease-in;
     background-image: linear-gradient(
       to right,
-      aquamarine,
-      rgba(132, 0, 255, 0.979) 70%
+      #454545,
+      #fff
     );
     background-size: 200% 100%;
     background-position: -100%;
@@ -38,30 +37,15 @@ body
     padding: 20% 0;
     position: relative;
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    -webkit-text-fill-color: #fff;
     transition: all 0.5s ease-in-out;
-}
-  
-.text:before
-{
-    content: '';
-    background: linear-gradient(
-        to right,
-        rgba(132, 0, 255, 0.979) 70%,
-        aquamarine
-      );
-    display: block;
-    position: absolute;
-    bottom: -3px;
-    left: 0;
-    width: 0;
-    height: 3px;
-    transition: all 0.3s ease-in-out;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.73);
 }
   
 .text:hover 
 {
    background-position: 0;
+   text-shadow: -6px 0px 15px rgba(255, 255, 240, 0.83), 6px 0px 15px rgba(255, 255, 240, 0.83);
 }
   
 .text:hover::before

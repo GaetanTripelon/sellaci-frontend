@@ -24,15 +24,13 @@
 </head>
 <body>
     <div id="title">
-        <div>
-            <img id ="Logo" src="images/Logo_fond_transparent.png" onclick="BackToIndex()">
-        </div>
+        <header><img id ="logo" src="images/Logo_fond_transparent.png" onclick="BackToIndex()"></header>
         <div id="Homepage">           
-            <button id="play" onclick="play()" onclick="Go()">Play</button><br><br>
+            <button id="play" onclick="play()" onclick="Init()">Play</button><br><br>
             <button id="rules" onclick="rules()">Rules</button><br><br>
             <button id="aboutus" onclick="aboutus()">About Us</button><br><br>
-            <button id="logout" onclick="logout()">Logout</button>
         </div>
+        <footer><img id="logout" src ="images/Logo_logout.png" onclick="logout()"></footer>
     </div>
             
 </body>
@@ -52,6 +50,9 @@
     }
     function BackToIndex(){
         window.location = "index.html";
+    }
+    function logout(){
+        window.location = "login.html";
     }
 </script>
 

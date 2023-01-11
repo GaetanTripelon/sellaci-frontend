@@ -2,10 +2,14 @@ body
 {
     text-align: center;
     font-family: "Barlow Condensed",arial, helvetica;
-    color: rgb(64, 172, 172);
-    background-color: rgb(20, 20, 20);
+    color: #454545;
+    background-color: #C8C8C8;
 }
-img
+header
+{
+    background-color: #F43E43;
+}
+#logo
 {
     margin-top: 5%;
     margin-bottom: 5%;
@@ -18,23 +22,36 @@ button
     width: 50%;
     height: 20%;
     background-color:#fff;
-    color: rgb(97, 97, 97);
+    color: #C8C8C8;
     font-size : 200%;
     align-items: center;
     transition: all 0.5s ease-out;
 }
 button:hover 
 {
-    border-color: aquamarine;
-    background-color: #021d20;
+    border-color: #454545;
+    background-color: #F43E43;
     color: white;
 }
 button:focus
 {
-    border-color: aquamarine;
-    background-color: #021d20;
+    border-color: #454545;
+    background-color: #F43E43;
 }
 img:hover
 {
     cursor:grab;
+}
+footer
+{
+    background-color: #F43E43;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: auto;
+}
+#logout
+{
+    width: 10%;
 }
