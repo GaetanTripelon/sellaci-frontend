@@ -2,14 +2,28 @@ body
 {
     text-align: center;
     font-family: "Barlow Condensed",arial, helvetica;
-    color: aquamarine;
-    background-color: #454545;
+    color: #454545;
+    background-color: #C8C8C8;
+}
+header
+{
+    background-color: #F43E43;
+    height: 10%;
 }
 img
 {
     margin-top: 5%;
     margin-bottom: 5%;
     width: 30%;
+}
+h2
+{
+    color: #F43E43;
+    font-weight: bold;
+}
+p
+{
+    font-size: 120%;
 }
 button
 {
@@ -18,23 +32,33 @@ button
     width: 50%;
     height: 20%;
     background-color:#fff;
-    color: rgb(97, 97, 97);
+    color: #F43E43;
     font-size : 200%;
     align-items: center;
     transition: all 0.5s ease-out;
 }
 button:hover 
 {
-    border-color: aquamarine;
-    background-color: #021d20;
+    border-color: #454545;
+    background-color: #F43E43;
     color: white;
+    cursor: pointer;
 }
 button:focus
 {
-    border-color: aquamarine;
-    background-color: #021d20;
+    border-color: #454545;
+    background-color: #F43E43;
 }
 img:hover
 {
     cursor:grab;
+}
+footer
+{
+    background-color: #F43E43;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 10%;
 }

@@ -2,8 +2,8 @@ body
 {
     text-align: center;
     font-family: "Barlow Condensed",arial, helvetica;
-    color: rgb(64, 172, 172);
-    background-color: #454545;
+    color: #454545;
+    background-color: #F43E43;
 }
 img
 {
@@ -22,7 +22,7 @@ img
 }
 #life
 {
-    color : rgba(57, 151, 70, 0.979);
+    color : rgba(0, 253, 34, 0.979);
 }
 #score
 {
@@ -63,7 +63,7 @@ img
     border-radius: 20px;
     width: 75%;
     font-size: 150%;
-    color: rgb(174, 0, 255);
+    color: #F43E43;
     text-align: center;
     font-weight: bold;
     font-style: italic;
@@ -73,33 +73,34 @@ button
 {
     margin-top: 2%;
     border-radius: 20px;
-    width: 60%;
-    height: 10%;
+    width: 50%;
+    height: 20%;
     background-color:#fff;
-    color: rgb(97, 97, 97);
+    color: #454545;
     font-size : 200%;
     align-items: center;
     transition: all 0.5s ease-out;
 }
 button:hover 
 {
-    border-color: aquamarine;
-    background-color: #021d20;
-    color: #fff;
+    border-color:#C8C8C8 ;
+    background-color: #454545;
+    color: #F43E43;
+    cursor: pointer;
 }
 button:focus
 {
-    border-color: aquamarine;
-    background-color: #021d20;
+    border-color: #454545;
+    background-color: #F43E43;
 }
 #myBtn
 {
     margin-top: 2%;
     border-radius: 20px;
-    width: 60%;
-    height: 10%;
+    width: 50%;
+    height: 20%;
     background-color:#fff;
-    color: rgb(97, 97, 97);
+    color: #454545;
     font-size : 200%;
     align-items: center;
     transition: all 0.5s ease-out;
@@ -109,6 +110,7 @@ button:focus
     border-color: rgb(124, 175, 158);
     background-color: #04a165;
     color: #fff;
+    cursor: pointer;
 }
 #myBtn:focus
 {
@@ -119,10 +121,10 @@ button:focus
 {
     margin-top: 2%;
     border-radius: 20px;
-    width: 60%;
-    height: 10%;
+    width: 50%;
+    height: 20%;
     background-color:#fff;
-    color: rgb(97, 97, 97);
+    color: #454545;
     font-size : 200%;
     align-items: center;
     transition: all 0.5s ease-out;
@@ -132,6 +134,7 @@ button:focus
     border-color: rgb(226, 132, 55);
     background-color: #f74a16;
     color: #fff;
+    cursor: pointer;
 }
 #myBtn2:focus
 {
@@ -142,10 +145,10 @@ button:focus
 {
     margin-top: 2%;
     border-radius: 20px;
-    width: 60%;
-    height: 10%;
+    width: 50%;
+    height: 20%;
     background-color:#fff;
-    color: rgb(97, 97, 97);
+    color: #454545;
     font-size : 200%;
     align-items: center;
     transition: all 0.5s ease-out;
@@ -155,6 +158,7 @@ button:focus
     border-color: rgb(131, 167, 49);
     background-color: #f8fc2f;
     color: #000;
+    cursor: pointer;
 }
 #myBtn3:focus
 {
@@ -165,10 +169,10 @@ button:focus
 {
     margin-top: 2%;
     border-radius: 20px;
-    width: 60%;
-    height: 10%;
+    width: 50%;
+    height: 20%;
     background-color:#fff;
-    color: rgb(97, 97, 97);
+    color: #454545;
     font-size : 200%;
     align-items: center;
     transition: all 0.5s ease-out;
@@ -178,6 +182,7 @@ button:focus
     border-color: rgb(203, 174, 250);
     background-color: #9703fa;
     color: #fff;
+    cursor: pointer;
 }
 #myBtn4:focus
 {
@@ -190,5 +195,5 @@ h1 a
 }
 img:hover
 {
-    cursor:grab;
+    cursor:pointer;
 }

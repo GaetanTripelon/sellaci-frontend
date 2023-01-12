@@ -2,7 +2,7 @@ body
 {
     text-align: center;
     font-family: "Barlow Condensed",arial, helvetica;
-    color: aquamarine;
+    color: #F43E43;
     background-color: #454545;
     transition: ease-in-out;
 }
@@ -12,30 +12,16 @@ img
     margin-bottom: 5%;
     width: 30%;
 }
-button
-{
-    margin-top: 2%;
-    border-radius: 20px;
-    width: 50%;
-    height: 20%;
-    background-color:#fff;
-    color: rgb(97, 97, 97);
-    font-size : 200%;
-    align-items: center;
-    transition: all 0.5s ease-out;
-}
-button:hover 
-{
-    border-color: aquamarine;
-    background-color: #021d20;
-    color: white;
-}
-button:focus
-{
-    border-color: aquamarine;
-    background-color: #021d20;
-}
 img:hover
 {
     cursor:grab;
+}
+footer
+{
+    background-color: #F43E43;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 10%;
 }

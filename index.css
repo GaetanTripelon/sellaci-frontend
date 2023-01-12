@@ -40,12 +40,14 @@ body
     -webkit-text-fill-color: #fff;
     transition: all 0.5s ease-in-out;
     text-shadow: 0 0 5px rgba(255, 255, 255, 0.73);
+    cursor: pointer;
 }
   
 .text:hover 
 {
    background-position: 0;
    text-shadow: -6px 0px 15px rgba(255, 255, 240, 0.83), 6px 0px 15px rgba(255, 255, 240, 0.83);
+   cursor: pointer;
 }
   
 .text:hover::before

@@ -53,7 +53,7 @@
         if (is_success) {
           console.log('success')
           h1.textContent = "Bien joué BG !"
-          h1.style.color = 'rgba(57, 151, 70, 0.979)'
+          h1.style.color = '#fff'
           h1.style.fontWeight = 'bold'
           result.appendChild(h1)
           document.getElementById("submitbutton").style.display = "none"
@@ -73,7 +73,7 @@
             life_value.style.color = 'orange'
           }
           else if (new_life_value == 1){
-            life_value.style.color = 'red'
+            life_value.style.color = '#454545'
           }
           if (life_value.textContent > 0) {
             h1.textContent = 'Essaie encore'
@@ -89,7 +89,7 @@
             h1.textContent = PLAYER_RESULT
             h2.style.color = 'white'
             h2.style.marginTop = '5%'
-            h1.style.color = 'red'
+            h1.style.color = '#454545'
             h1.style.fontWeight = 'bold'
             result.appendChild(h2)
             result.appendChild(h1)
@@ -124,7 +124,7 @@
             h2.style.color = 'white'
             h2.style.marginTop = '5%'
             h2.style.fontStyle = 'italic'
-            h1.style.color = 'red'
+            h1.style.color = '#454545'
             h1.style.fontWeight = 'bold'
             result.appendChild(h2)
             result.appendChild(h1)

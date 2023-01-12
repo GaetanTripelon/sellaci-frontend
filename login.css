@@ -39,7 +39,6 @@ body
     border-color: #F43E43;
     background-color: #fff;
     color: #454545;
-    font-family: "Barlow Condensed", arial, helvetica;
     transition: all 0.5s ease-out;
     font-size: 200%;
     border-radius: 50px;
@@ -50,10 +49,10 @@ body
     border-color: #F43E43;
     background-color: #454545;
     color: white;
-    font-family: "Barlow Condensed", arial, helvetica;
     font-size: 200%;
     border-radius: 50px;
     width: 40%;
+    cursor: pointer;
 }
 #trial:focus
 {
@@ -67,7 +66,6 @@ body
     border-color: #F43E43;
     background-color: #fff;
     color: #454545;
-    font-family: "Barlow Condensed", arial, helvetica;
     transition: all 0.5s ease-out;
     font-size: 200%;
     border-radius: 50px;
@@ -78,15 +76,16 @@ body
     border-color: #F43E43;
     background-color: #454545;
     color: white;
-    font-family: "Barlow Condensed", arial, helvetica;
     font-size: 200%;
     border-radius: 50px;
     width: 40%;
+    cursor: pointer;
 }
 #create:focus
 {
     border-color: #F43E43;
-    background-color: #021d20;
+    background-color: #454545;
+    color: #fff;
 }
 #reset_password_action
 {
@@ -94,7 +93,6 @@ body
     border-color: #F43E43;
     background-color: #fff;
     color: #454545;
-    font-family: "Barlow Condensed", arial, helvetica;
     transition: all 0.5s ease-out;
     font-size: 200%;
     border-radius: 50px;
@@ -105,13 +103,14 @@ body
     border-color: #F43E43;
     background-color: #454545;
     color: white;
-    font-family: "Barlow Condensed", arial, helvetica;
     font-size: 200%;
     border-radius: 50px;
     width: 40%;
+    cursor: pointer;
 }
 #reset_password_actioneate:focus
 {
     border-color: #F43E43;
     background-color: #454545;
+    color: #fff;
 }

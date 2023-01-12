@@ -22,7 +22,7 @@ button
     width: 50%;
     height: 20%;
     background-color:#fff;
-    color: #C8C8C8;
+    color: #454545;
     font-size : 200%;
     align-items: center;
     transition: all 0.5s ease-out;
@@ -32,6 +32,7 @@ button:hover
     border-color: #454545;
     background-color: #F43E43;
     color: white;
+    cursor: pointer;
 }
 button:focus
 {
@@ -40,7 +41,7 @@ button:focus
 }
 img:hover
 {
-    cursor:grab;
+    cursor:pointer;
 }
 footer
 {
@@ -54,4 +55,9 @@ footer
 #logout
 {
     width: 10%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    cursor: pointer;
 }
