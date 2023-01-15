@@ -52,6 +52,7 @@
       if (request_player.status >= 200 && request_player.status < 400) {
         if (is_success) {
           console.log('success')
+          //return_success('clement.tailleur@gmail.com', 'TEST', 2)
           h1.textContent = "Bien joué BG !"
           h1.style.color = '#fff'
           h1.style.fontWeight = 'bold'
@@ -64,6 +65,10 @@
           console.log(score_value.textContent)
           var new_score_value = parseInt(score_value.textContent) + 1
           score_value.textContent = new_score_value
+
+          //var request_success = new XMLHttpRequest()
+          //request_success.open('GET', URL_API + url_parameters, true)
+          //request_success.send()
         } else {
           var life_value = document.getElementById("life")
           console.log(life_value.textContent)
@@ -137,21 +142,6 @@
             score_value.textContent = new_score_value
   }
 
-  function shuffle(array) {
-    let currentIndex = array.length,  randomIndex;
-    // While there remain elements to shuffle.
-    while (currentIndex != 0) {
-      // Pick a remaining element.
-      randomIndex = Math.floor(Math.random() * currentIndex);
-      currentIndex--;
-      // And swap it with the current element.
-      [array[currentIndex], array[randomIndex]] = [
-        array[randomIndex], array[currentIndex]];
-    }
-    console.log(array.slice(0,3))
-    return array.slice(0,3);
-  }
-
 
 function get_random_player() {
   try {
@@ -165,7 +155,9 @@ function get_random_player() {
     var data = JSON.parse(this.response)
     console.log(data)
     PLAYER_RESULT = data.ShortName
-    selected_clubs = shuffle(data.Teams)
+    console.log(data.Level)
+    document.getElementById('clublevel').innerHTML = 'Niveau ' + data.Level + '/6'
+    selected_clubs = data.Teams
     if (request.status >= 200 && request.status < 400) {
       selected_clubs.forEach(club => {
         const club_list = document.getElementById('clublist')      
@@ -178,4 +170,35 @@ function get_random_player() {
     }
   }
   request.send()
+}
+
+// Example POST method implementation:
+async function postData(url = '', data = {}) {
+  const response = await fetch(url, {
+      method: 'POST', 
+      mode: 'cors', 
+      cache: 'no-cache', 
+      credentials: 'same-origin', 
+      headers: {
+      'Content-Type': 'application/json'
+      },
+      redirect: 'follow', 
+      referrerPolicy: 'no-referrer',
+      body: JSON.stringify(data) 
+  });
+  return response.json();
+}
+
+
+function return_success(email, player, level){
+  data = {
+      "email": email,
+      "player_name": player,
+      "level": level
+  }
+
+  console.log('return success')
+  console.log(data)
+
+  postData(URL_API + "return_success_player", data);
 }
