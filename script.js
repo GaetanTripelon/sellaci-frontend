@@ -17,6 +17,7 @@
     document.getElementById("textarea-player").value = "";
     document.getElementById("result").innerHTML = '';
     document.getElementById('replay').innerHTML = '' ;
+    document.getElementById("first_letter_text").style.display = "none"
       }
 
   function Logout(){
@@ -33,6 +34,7 @@
     document.getElementById("life").textContent = 3
     document.getElementById("life").style.color = 'rgba(0, 253, 34, 0.979)'
     result.setAttribute("id", "result");
+    document.getElementById("first_letter_button").style.display= "block"
   }
 
   function TryPlayerButton() {
@@ -159,6 +161,7 @@ function get_random_player() {
     document.getElementById('clublevel').innerHTML = 'Niveau ' + data.Level + '/6'
     selected_clubs = data.Teams
     if (request.status >= 200 && request.status < 400) {
+      document.getElementById("first_letter_text").innerHTML =  data.Indication_First_Letter
       selected_clubs.forEach(club => {
         const club_list = document.getElementById('clublist')      
         const h1 = document.createElement('h1')
@@ -201,4 +204,16 @@ function return_success(email, player, level){
   console.log(data)
 
   postData(URL_API + "return_success_player", data);
+}
+
+function showIndicator(){
+  document.getElementById("sure_button").style.display = "block"
+  if(document.getElementById("sure_button").clicked == true){
+  document.getElementById("first_letter_text").style.display = "block"
+  document.getElementById("first_letter_button").style.display = "none"
+  var score_value = document.getElementById('score')
+  console.log(score_value.textContent)
+  var new_score_value = parseInt(score_value.textContent) - 1
+  score_value.textContent = new_score_value
+  }
 }

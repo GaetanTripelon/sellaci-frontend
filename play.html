@@ -52,6 +52,15 @@
             <div id="showiflose" style="display:none">
             </div>
             <div id="result"></div>
+            <div id="first_letter_button">
+                <button value="indice" onclick="showIndicator()">Un indice ?</button>
+                <div id="sure_button" style="display: none;">
+                    <button value="sure">Tu vas perdre un point, tu es sûr ?</button>
+                </div>
+            </div>
+            <div id="first_letter_text">
+
+            </div>
             <div id="submitbutton">
                 <button onclick="TryPlayerButton()" id="myBtn">Soumettre</button>
             </div>
@@ -70,7 +79,7 @@
     function BackToMenu(){
         window.location = "menu.html";
     }
-    get_random_player()
+    Go()
 </script>
 
 </html>
