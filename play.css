@@ -197,3 +197,15 @@ img:hover
 {
     cursor:pointer;
 }
+#clublevel
+{
+    font-size: 200%;
+    color: gold;
+    border-style: dotted;
+}
+#first_letter_text
+{
+    font-size: 200%;
+    color: gold;
+    font-weight: bold;
+}

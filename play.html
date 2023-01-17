@@ -47,24 +47,28 @@
                 </div>
                 <form id="enterthename">
                     <input type="text" class="form-control" id="textarea-player" rows="1" placeholder="Nom du joueur" ng-keypress="getkeys($event)" ng-model="newMessageContent"></input>
-                </form>               
+                </form>
+                <div id="first_letter_text">
+                </div>               
             </div>
             <div id="showiflose" style="display:none">
             </div>
             <div id="result"></div>
-            <div id="first_letter_button">
-                <button value="indice" onclick="showIndicator()">Un indice ?</button>
-                <div id="sure_button" style="display: none;">
-                    <button value="sure">Tu vas perdre un point, tu es sûr ?</button>
-                </div>
+            <div id="yesbtn" style="display: none;">
+                <button value="yes" id="yes" onclick="showIndicator()">Oui</button>
+            </div>
+            <div id="nobtn" style="display: none">
+                    <button value="no" id="no" onclick="dontShowIndicator()">Non</button>
             </div>
             <div id="first_letter_text">
-
             </div>
             <div id="submitbutton">
                 <button onclick="TryPlayerButton()" id="myBtn">Soumettre</button>
             </div>
             <div id="replay"></div>
+            <div id="first_letter_button">
+                <button value="indice" id="indice" onclick="helpMe()">Un indice ?</button>
+            </div>
             <div id="abandon">
                 <button onclick="ShowPlayer_TryAgain()" id="myBtn2">Abandonner</button>
             </div>

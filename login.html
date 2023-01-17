@@ -4,17 +4,27 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- mobile metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <!-- site metas -->
+    <title>Sellaci</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <script src="config.js"></script>
+    <script src="script.js"></script>
     <title>Login</title>
     <link rel="stylesheet" href="login.css">
     <link href='https://fonts.googleapis.com/css?family=Barlow+Condensed' rel='stylesheet'>
 </head>
 
 <body>
-    <div id="transition_page" class=" transition active"></div>
     <p id="register">S'ENREGISTRER</p>
-    <input type='text' name='email' placeholder="Email" id="email_box"><br>
-    <input type='password' name='password' placeholder="Mot de passe" id="password_box"><br>
+    <input type='text' name='email' placeholder="Email" id="email_box" required><br>
+    <input type='password' name='password' placeholder="Mot de passe" id="password_box" required><br>
     <input type="submit" value="Se connecter" id='trial' onclick="login()"/>
     <form action="signup.html" id="signup_action">
         <input type="submit" value="Créer un compte" id="create">
@@ -44,25 +54,7 @@
                 }
             }
         );
-    }
-
-    // Example POST method implementation:
-    async function postData(url = '', data = {}) {
-        const response = await fetch(url, {
-            method: 'POST', 
-            mode: 'cors', 
-            cache: 'no-cache', 
-            credentials: 'same-origin', 
-            headers: {
-            'Content-Type': 'application/json'
-            },
-            redirect: 'follow', 
-            referrerPolicy: 'no-referrer',
-            body: JSON.stringify(data) 
-        });
-        return response.json();
-    }
-    
+    }   
 </script>
 
 </html>

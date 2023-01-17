@@ -61,8 +61,11 @@
           result.appendChild(h1)
           document.getElementById("submitbutton").style.display = "none"
           document.getElementById("replay").innerHTML = '<button value=Jouer encore ?" id="myBtn4" onclick="Go()">Un nouveau joueur ?</button>'
-          document.getElementById("abandon").style.display = "None"
+          document.getElementById("abandon").style.display = "none"
           document.getElementById("retourmenu").style.display = "block"
+          document.getElementById("first_letter_button").style.display = "none"
+          document.getElementById("nobtn").style.display = "none"
+          document.getElementById("yesbtn").style.display = "none"
           var score_value = document.getElementById('score')
           console.log(score_value.textContent)
           var new_score_value = parseInt(score_value.textContent) + 1
@@ -92,6 +95,9 @@
             document.getElementById("textarea-player").style.display = "None"
             document.getElementById("who").style.display = "None"
             document.getElementById("enterthename").style.display = "None"
+            document.getElementById("first_letter_button").style.display = "none"
+            document.getElementById("nobtn").style.display = "none"
+            document.getElementById("yesbtn").style.display = "none"
             h2.textContent = 'Game Over, it was '
             h1.textContent = PLAYER_RESULT
             h2.style.color = 'white'
@@ -123,9 +129,12 @@
       result.textContent = ''  
       const h1 = document.createElement('h1')
       const h2 = document.createElement('h2')
-            document.getElementById("submitbutton").style.display = "None"
-            document.getElementById("who").style.display = "None"
-            document.getElementById("enterthename").style.display = "None"
+            document.getElementById("submitbutton").style.display = "none"
+            document.getElementById("who").style.display = "none"
+            document.getElementById("enterthename").style.display = "none"
+            document.getElementById("first_letter_button").style.display = "none"
+            document.getElementById("nobtn").style.display = "none"
+            document.getElementById("yesbtn").style.display = "none"
             h2.textContent = 'Game Over, it was '
             h1.textContent = PLAYER_RESULT
             h2.style.color = 'white'
@@ -158,10 +167,10 @@ function get_random_player() {
     console.log(data)
     PLAYER_RESULT = data.ShortName
     console.log(data.Level)
-    document.getElementById('clublevel').innerHTML = 'Niveau ' + data.Level + '/6'
+    document.getElementById('clublevel').innerHTML = 'Niveau de difficulté : ' + data.Level + '/6'
     selected_clubs = data.Teams
     if (request.status >= 200 && request.status < 400) {
-      document.getElementById("first_letter_text").innerHTML =  data.Indication_First_Letter
+      document.getElementById("first_letter_text").innerHTML =  '<span style="color:#fff; font-weight:normal">Première lettre</span><br>' + data.Indication_First_Letter
       selected_clubs.forEach(club => {
         const club_list = document.getElementById('clublist')      
         const h1 = document.createElement('h1')
@@ -205,15 +214,24 @@ function return_success(email, player, level){
 
   postData(URL_API + "return_success_player", data);
 }
-
-function showIndicator(){
-  document.getElementById("sure_button").style.display = "block"
-  if(document.getElementById("sure_button").clicked == true){
-  document.getElementById("first_letter_text").style.display = "block"
+function helpMe(){
+  document.getElementById("first_letter_button").style.display = "block"
+  alert ("Tu vas perdre un point, tu es sûr ?")
+  document.getElementById("yesbtn").style.display = "block"
+  document.getElementById("nobtn").style.display = "block"
   document.getElementById("first_letter_button").style.display = "none"
+}
+function showIndicator(){
+  document.getElementById("first_letter_text").style.display = "block"
+  document.getElementById("nobtn").style.display = "none"
+  document.getElementById("yesbtn").style.display = "none"
   var score_value = document.getElementById('score')
   console.log(score_value.textContent)
   var new_score_value = parseInt(score_value.textContent) - 1
   score_value.textContent = new_score_value
-  }
+}
+function dontShowIndicator(){
+  document.getElementById("first_letter_button").style.display = "block"
+  document.getElementById("nobtn").style.display = "none"
+  document.getElementById("yesbtn").style.display = "none"
 }

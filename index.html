@@ -4,26 +4,75 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- mobile metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- site metas -->
+    <title>Sellaci</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- bootstrap css -->
     <script src="config.js"></script>
+    <script src="script.js"></script>
     <title>Login</title>
     <link rel="stylesheet" href="index.css">
     <link href='https://fonts.googleapis.com/css?family=Barlow+Condensed' rel='stylesheet'>
 </head>
 
 <body>
-    <div id="transition_page" class=" transition active"></div>
     <div class="container">
         <img class="image" src="images/Logo_fond_transparent.png"/>
-        <div class="text">
-            <label id="Log" onclick="log()">SE CONNECTER</label>
+    </div>
+    <button onclick="document.getElementById('id01').style.display='block'" style="width:auto; font-weight: bold;">IDENTIFICATION</button>
+    
+    <div id="id01" class="modal">
+      
+      <form class="modal-content animate" action="menu.html" method="get">
+        <div class="imgcontainer">
+          <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+          <!-- <img src="img_avatar2.png" alt="Avatar" class="avatar"> AJOUTER QUAND FONCTIONNALITE AVATAR OK-->
         </div>
+    
+        <div class="container">
+          <label for="uname"><b>Email</b></label>
+          <input type="text" placeholder="Adresse Email" name="email" id="email_box" required>
+    
+          <label for="psw"><b>Mot de passe</b></label>
+          <input type="password" placeholder="Mot de passe" name="psw" id="password_box" required>
+            
+          <button type="submit" onclick="login()">S'identifier</button>
+          <label>
+            <input type="checkbox" checked="checked" name="remember"> Se souvenir de moi
+          </label>
+        </div>
+    
+        <div class="container" style="background-color:#f1f1f1; border-radius: 50px;">
+          <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Annuler</button>
+          <span class="psw">Mot de passe <a href="/reset_password.html">oublié?</a></span>
+        </div>
+      </form>
     </div>
 </body>
 
 <script>
-    function log(){
-        window.location = "login.html";
-    }
+    function login(){
+        data = {
+            "email": document.getElementById("email_box").value,
+            "password": document.getElementById("password_box").value,
+        }
+
+        console.log(data)
+
+        postData(URL_API + "login", data)
+            .then((login_success) => {
+                if(login_success['success']){
+                    console.log('LOGIN SUCCESS')
+                }else{
+                    console.log('LOGIN FAIL')
+                }
+            }
+        );
+    }   
 </script>
 
 </html>

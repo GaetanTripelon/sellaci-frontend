@@ -8,7 +8,7 @@ body
 }
 #register
 {
-    font-size: 500%;
+    font-size: 400%;
     color: #F43E43;
     font-weight: bold;
 }
@@ -16,7 +16,7 @@ body
 {
     text-align: center;
     font-size: 200%;
-    width: 40%;
+    width: 70%;
     background-color: #C8C8C8;
     color: #DBDBDB;
     border-style: none;
@@ -27,7 +27,7 @@ body
     text-align: center;
     margin-top: 1%;
     font-size: 200%;
-    width: 40%;
+    width: 70%;
     background-color: #C8C8C8;
     color: #DBDBDB;
     border-style: none;
@@ -42,7 +42,7 @@ body
     transition: all 0.5s ease-out;
     font-size: 200%;
     border-radius: 50px;
-    width: 40%;
+    width: 70%;
 }
 #trial:hover 
 {
@@ -51,7 +51,7 @@ body
     color: white;
     font-size: 200%;
     border-radius: 50px;
-    width: 40%;
+    width: 70%;
     cursor: pointer;
 }
 #trial:focus
@@ -69,7 +69,7 @@ body
     transition: all 0.5s ease-out;
     font-size: 200%;
     border-radius: 50px;
-    width: 40%;
+    width: 70%;
 }
 #create:hover 
 {
@@ -78,7 +78,7 @@ body
     color: white;
     font-size: 200%;
     border-radius: 50px;
-    width: 40%;
+    width: 70%;
     cursor: pointer;
 }
 #create:focus
@@ -96,7 +96,7 @@ body
     transition: all 0.5s ease-out;
     font-size: 200%;
     border-radius: 50px;
-    width: 40%;
+    width: 70%;
 }
 #reset_password_action:hover 
 {
@@ -105,7 +105,7 @@ body
     color: white;
     font-size: 200%;
     border-radius: 50px;
-    width: 40%;
+    width: 70%;
     cursor: pointer;
 }
 #reset_password_actioneate:focus
