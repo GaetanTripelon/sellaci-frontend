@@ -19,39 +19,73 @@
     <link href='https://fonts.googleapis.com/css?family=Barlow+Condensed' rel='stylesheet'>
 </head>
 
-<body>
+<body class="animate">
     <div class="container">
         <img class="image" src="images/Logo_fond_transparent.png"/>
     </div>
-    <button onclick="document.getElementById('id01').style.display='block'" style="width:auto; font-weight: bold;">IDENTIFICATION</button>
-    
-    <div id="id01" class="modal">
+    <!-- LOGIN -->
+    <div id="login_id">
+        <div>
+        <button onclick="document.getElementById('id01').style.display='block'" style="width:auto; font-weight: bold;">IDENTIFICATION</button>
+        </div>
+        <div id="id01" class="modal">
       
-      <form class="modal-content animate" action="menu.html" method="get">
-        <div class="imgcontainer">
-          <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-          <!-- <img src="img_avatar2.png" alt="Avatar" class="avatar"> AJOUTER QUAND FONCTIONNALITE AVATAR OK-->
+          <form class="modal-content animate" action="menu.html" method="get">
+            <div class="imgcontainer">
+              <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+              <!-- <img src="img_avatar2.png" alt="Avatar" class="avatar"> AJOUTER QUAND FONCTIONNALITE AVATAR OK-->
+            </div>
+        
+            <div class="container">
+              <label for="uname"><b>Email</b></label>
+              <input type="text" placeholder="Adresse Email" name="email" id="email_box" required>
+        
+              <label for="psw"><b>Mot de passe</b></label>
+              <input type="password" placeholder="Mot de passe" name="psw" id="password_box" required>
+                
+              <button type="submit" onclick="login()">S'identifier</button>
+              <label>
+                <input type="checkbox" checked="checked" name="remember"> Se souvenir de moi
+              </label>
+            </div><br>
+        
+            <div class="container" style="background-color:#f1f1f1; border-radius: 50px; width: 30%">
+              <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Annuler</button><br>
+              <span class="psw">Mot de passe <a href="/reset_password.html">oublié?</a></span>
+            </div>
+          </form>
         </div>
+        <!-- CREATE ACCOUNT -->
+        <div id="create_id">
+          <div>
+          <button onclick="document.getElementById('create01').style.display='block'" style="width:auto; font-weight: bold;">CRÉER UN COMPTE</button>
+          </div>
+          <div id="create01" class="modal">
+        
+            <form class="modal-content animate" action="index.html" method="get">
+              <div class="imgcontainer">
+                <span onclick="document.getElementById('create01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                <!-- <img src="img_avatar2.png" alt="Avatar" class="avatar"> AJOUTER QUAND FONCTIONNALITE AVATAR OK-->
+              </div>
+          
+              <div class="container">
+                <label for="uname"><b>Email</b></label>
+                <input type="text" placeholder="Adresse Email" name="email" id="email_box" required>
+          
+                <label for="psw"><b>Mot de passe</b></label>
+                <input type="password" placeholder="Mot de passe" name="psw" id="password_box" required>
+                <input type="password" placeholder="Confirmer mot de passe" name="psw" id="password_box" required>
+                  
+                <button type="submit" onclick="signup()">Créer le compte</button>
+              </div><br>
+          
+              <div class="container" style="border-radius: 50px;">
+                <button type="button" onclick="document.getElementById('create01').style.display='none'" class="cancelbtn">Annuler</button><br>
+              </div>
+            </form>
+          </div>
+        </div>   
     
-        <div class="container">
-          <label for="uname"><b>Email</b></label>
-          <input type="text" placeholder="Adresse Email" name="email" id="email_box" required>
-    
-          <label for="psw"><b>Mot de passe</b></label>
-          <input type="password" placeholder="Mot de passe" name="psw" id="password_box" required>
-            
-          <button type="submit" onclick="login()">S'identifier</button>
-          <label>
-            <input type="checkbox" checked="checked" name="remember"> Se souvenir de moi
-          </label>
-        </div>
-    
-        <div class="container" style="background-color:#f1f1f1; border-radius: 50px;">
-          <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Annuler</button>
-          <span class="psw">Mot de passe <a href="/reset_password.html">oublié?</a></span>
-        </div>
-      </form>
-    </div>
 </body>
 
 <script>
@@ -69,10 +103,30 @@
                     console.log('LOGIN SUCCESS')
                 }else{
                     console.log('LOGIN FAIL')
+                    alert ("Invalid email or password")
                 }
             }
         );
-    }   
+    }
+    function signup(){
+        data = {
+            "email": document.getElementById("email_box").value,
+            "password": document.getElementById("password_box").value,
+        }
+
+        console.log(data)
+
+        postData(URL_API + "signup", data)
+            .then((signup_success) => {
+                if(signup_success['success']){
+                    console.log('SIGNUP SUCCESS')
+                    window.location = "menu.html";
+                }else{
+                    console.log('SIGNUP FAIL')
+                }
+            }
+        );
+    }
 </script>
 
 </html>

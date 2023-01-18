@@ -22,7 +22,7 @@
     <link href='https://fonts.googleapis.com/css?family=Kalam' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Barlow+Condensed' rel='stylesheet'>
 </head>
-<body>
+<body class="animate">
     <div id="transition_page" class=" transition active"></div>
     <div id="title">
         <div>
@@ -39,8 +39,8 @@
             <div id="clubs">
                 <h2>Clubs joués</h2>
             </div> 
-            <div id="clublevel"></div>       
-            <div id="clublist"></div>   
+            <div id="clublevel" class="animate"></div>       
+            <div id="clublist" class="animate"></div>   
             <div id="playername">
                 <div id="who">
                     <h2>Qui suis-je ?</h2>
@@ -48,32 +48,32 @@
                 <form id="enterthename">
                     <input type="text" class="form-control" id="textarea-player" rows="1" placeholder="Nom du joueur" ng-keypress="getkeys($event)" ng-model="newMessageContent"></input>
                 </form>
-                <div id="first_letter_text">
+                <div id="first_letter_text" class="animate">
                 </div>               
             </div>
-            <div id="showiflose" style="display:none">
+            <div id="showiflose" class="animate" style="display:none">
             </div>
-            <div id="result"></div>
+            <div id="result" class="animate"></div>
             <div id="yesbtn" style="display: none;">
-                <button value="yes" id="yes" onclick="showIndicator()">Oui</button>
+                <button value="yes" id="yes" class="animate" onclick="showIndicator()">Oui</button>
             </div>
             <div id="nobtn" style="display: none">
-                    <button value="no" id="no" onclick="dontShowIndicator()">Non</button>
+                    <button value="no" id="no" class="animate" onclick="dontShowIndicator()">Non</button>
             </div>
             <div id="first_letter_text">
             </div>
             <div id="submitbutton">
-                <button onclick="TryPlayerButton()" id="myBtn">Soumettre</button>
+                <button onclick="TryPlayerButton()" class="animate" id="myBtn">Soumettre</button>
             </div>
-            <div id="replay"></div>
+            <div id="replay" class="animate"></div>
             <div id="first_letter_button">
-                <button value="indice" id="indice" onclick="helpMe()">Un indice ?</button>
+                <button value="indice" id="indice" class="animate" onclick="helpMe()">Un indice ?</button>
             </div>
             <div id="abandon">
-                <button onclick="ShowPlayer_TryAgain()" id="myBtn2">Abandonner</button>
+                <button onclick="ShowPlayer_TryAgain()" class="animate" id="myBtn2">Abandonner</button>
             </div>
             <div id="retourmenu">
-                <button value="Retour" onclick="BackToMenu()">Retour au menu</button>
+                <button value="Retour" class="animate" onclick="BackToMenu()">Retour au menu</button>
             </div>
     </div>
             

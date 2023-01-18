@@ -21,7 +21,7 @@
       }
 
   function Logout(){
-    window.location = "login.html";
+    window.location = "index.html";
   }
 
   function Go() {
@@ -60,12 +60,13 @@
           h1.style.fontWeight = 'bold'
           result.appendChild(h1)
           document.getElementById("submitbutton").style.display = "none"
-          document.getElementById("replay").innerHTML = '<button value=Jouer encore ?" id="myBtn4" onclick="Go()">Un nouveau joueur ?</button>'
+          document.getElementById("replay").innerHTML = '<button value=Jouer encore ?" id="myBtn4" class="animate" onclick="Go()">Un nouveau joueur ?</button>'
           document.getElementById("abandon").style.display = "none"
           document.getElementById("retourmenu").style.display = "block"
           document.getElementById("first_letter_button").style.display = "none"
           document.getElementById("nobtn").style.display = "none"
           document.getElementById("yesbtn").style.display = "none"
+          document.getElementById("first_letter_text").style.display = "none"
           var score_value = document.getElementById('score')
           console.log(score_value.textContent)
           var new_score_value = parseInt(score_value.textContent) + 1
@@ -111,7 +112,7 @@
             console.log(score_value.textContent)
             var new_score_value = parseInt(score_value.textContent) - (score_value.textContent)
             score_value.textContent = new_score_value
-            playagain.innerHTML = '<button value="Retente ta chance ?" id="myBtn3" onclick="Go()">Retente ta chance</button>'
+            playagain.innerHTML = '<button value="Retente ta chance ?" id="myBtn3" class="animate" onclick="Go()">Retente ta chance</button>'
             playagain.style.display = 'block'
             document.getElementById("abandon").style.display = "None"
             document.getElementById("retourmenu").style.display = "block"
@@ -144,7 +145,7 @@
             h1.style.fontWeight = 'bold'
             result.appendChild(h2)
             result.appendChild(h1)
-            document.getElementById("replay").innerHTML = '<button value=Nouvelle Partie ?" id="myBtn3" onclick="Go()">Retente ta chance</button>'
+            document.getElementById("replay").innerHTML = '<button value=Nouvelle Partie ?" class="animate" id="myBtn3" onclick="Go()">Retente ta chance</button>'
             document.getElementById("abandon").style.display = "None"
             document.getElementById("retourmenu").style.display = "block"
             var score_value = document.getElementById('score')
